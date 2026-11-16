@@ -1,0 +1,171 @@
+{
+  "generator": "built-in image_gen",
+  "conceptual": true,
+  "assets": [
+    {
+      "name": "hero",
+      "prompt": "Use case: photorealistic-natural. GoldenWood industrial raw materials website. 16:9 wide aerial documentary photograph of a vast industrial hemp field with long geometric rows, late afternoon olive green crops, distant tree line and soft sky, calm darker left half for white headline. Coherent premium documentary industrial photography, natural light, earthy olive and cream palette, realistic materials. No text, no logos, no watermarks, no recreational cannabis buds, no smoking, no neon. Workers if present wear appropriate PPE. Deliver one separate finished photograph.",
+      "purpose": "Homepage hero",
+      "generated": true,
+      "files": [
+        "/images/hero-640.avif",
+        "/images/hero-640.webp",
+        "/images/hero-1280.avif",
+        "/images/hero-1280.webp",
+        "/images/hero-1536.avif",
+        "/images/hero-1536.webp"
+      ],
+      "original": "assets/originals/hero-original.png"
+    },
+    {
+      "name": "field",
+      "prompt": "Use case: photorealistic-natural. GoldenWood industrial raw materials website. 3:2 documentary photograph at human height along straight rows of tall industrial hemp stalk crops, warm natural daylight. Coherent premium documentary industrial photography, natural light, earthy olive and cream palette, realistic materials. No text, no logos, no watermarks, no recreational cannabis buds, no smoking, no neon. Workers if present wear appropriate PPE. Deliver one separate finished photograph.",
+      "purpose": "Production and editorial",
+      "generated": true,
+      "files": [
+        "/images/field-640.avif",
+        "/images/field-640.webp",
+        "/images/field-1280.avif",
+        "/images/field-1280.webp",
+        "/images/field-1536.avif",
+        "/images/field-1536.webp"
+      ],
+      "original": "assets/originals/field-original.png"
+    },
+    {
+      "name": "harvest",
+      "prompt": "Use case: photorealistic-natural. GoldenWood industrial raw materials website. 3:2 documentary photograph of agricultural harvesting machinery cutting tall industrial hemp stalk crops in an open field. Coherent premium documentary industrial photography, natural light, earthy olive and cream palette, realistic materials. No text, no logos, no watermarks, no recreational cannabis buds, no smoking, no neon. Workers if present wear appropriate PPE. Deliver one separate finished photograph.",
+      "purpose": "Production and editorial",
+      "generated": true,
+      "files": [
+        "/images/harvest-640.avif",
+        "/images/harvest-640.webp",
+        "/images/harvest-1280.avif",
+        "/images/harvest-1280.webp",
+        "/images/harvest-1536.avif",
+        "/images/harvest-1536.webp"
+      ],
+      "original": "assets/originals/harvest-original.png"
+    },
+    {
+      "name": "retted-stalks",
+      "prompt": "Use case: photorealistic-natural. GoldenWood industrial raw materials website. 3:2 documentary photograph of dry retted hemp stalks in agricultural bales, close material detail in a field. Coherent premium documentary industrial photography, natural light, earthy olive and cream palette, realistic materials. No text, no logos, no watermarks, no recreational cannabis buds, no smoking, no neon. Workers if present wear appropriate PPE. Deliver one separate finished photograph.",
+      "purpose": "Production and editorial",
+      "generated": true,
+      "files": [
+        "/images/retted-stalks-640.avif",
+        "/images/retted-stalks-640.webp",
+        "/images/retted-stalks-1280.avif",
+        "/images/retted-stalks-1280.webp",
+        "/images/retted-stalks-1536.avif",
+        "/images/retted-stalks-1536.webp"
+      ],
+      "original": "assets/originals/retted-stalks-original.png"
+    },
+    {
+      "name": "factory",
+      "prompt": "Use case: photorealistic-natural. GoldenWood industrial raw materials website. 3:2 documentary photograph of a large plausible primary mechanical hemp processing factory hall, steel machines and natural skylights. Coherent premium documentary industrial photography, natural light, earthy olive and cream palette, realistic materials. No text, no logos, no watermarks, no recreational cannabis buds, no smoking, no neon. Workers if present wear appropriate PPE. Deliver one separate finished photograph.",
+      "purpose": "Production and editorial",
+      "generated": true,
+      "files": [
+        "/images/factory-640.avif",
+        "/images/factory-640.webp",
+        "/images/factory-1280.avif",
+        "/images/factory-1280.webp",
+        "/images/factory-1536.avif",
+        "/images/factory-1536.webp"
+      ],
+      "original": "assets/originals/factory-original.png"
+    },
+    {
+      "name": "line",
+      "prompt": "Use case: photorealistic-natural. GoldenWood industrial raw materials website. 3:2 documentary photograph of a plausible decortication line separating bast fiber and woody hurd, conveyors and steel machinery. Coherent premium documentary industrial photography, natural light, earthy olive and cream palette, realistic materials. No text, no logos, no watermarks, no recreational cannabis buds, no smoking, no neon. Workers if present wear appropriate PPE. Deliver one separate finished photograph.",
+      "purpose": "Production and editorial",
+      "generated": true,
+      "files": [
+        "/images/line-640.avif",
+        "/images/line-640.webp",
+        "/images/line-1280.avif",
+        "/images/line-1280.webp",
+        "/images/line-1536.avif",
+        "/images/line-1536.webp"
+      ],
+      "original": "assets/originals/line-original.png"
+    },
+    {
+      "name": "long-fiber",
+      "prompt": "Use case: photorealistic-natural. GoldenWood industrial raw materials website. 3:2 macro product photograph of long decorticated natural hemp bast fiber, flowing golden cream strands on warm neutral background. Coherent premium documentary industrial photography, natural light, earthy olive and cream palette, realistic materials. No text, no logos, no watermarks, no recreational cannabis buds, no smoking, no neon. Workers if present wear appropriate PPE. Deliver one separate finished photograph.",
+      "purpose": "Material detail and catalog",
+      "generated": true,
+      "files": [
+        "/images/long-fiber-640.avif",
+        "/images/long-fiber-640.webp",
+        "/images/long-fiber-1280.avif",
+        "/images/long-fiber-1280.webp",
+        "/images/long-fiber-1536.avif",
+        "/images/long-fiber-1536.webp"
+      ],
+      "original": "assets/originals/long-fiber-original.png"
+    },
+    {
+      "name": "short-fiber",
+      "prompt": "Use case: photorealistic-natural. GoldenWood industrial raw materials website. 3:2 macro product photograph of short natural hemp fiber, short tangled cream strands on warm neutral background. Coherent premium documentary industrial photography, natural light, earthy olive and cream palette, realistic materials. No text, no logos, no watermarks, no recreational cannabis buds, no smoking, no neon. Workers if present wear appropriate PPE. Deliver one separate finished photograph.",
+      "purpose": "Material detail and catalog",
+      "generated": true,
+      "files": [
+        "/images/short-fiber-640.avif",
+        "/images/short-fiber-640.webp",
+        "/images/short-fiber-1280.avif",
+        "/images/short-fiber-1280.webp",
+        "/images/short-fiber-1536.avif",
+        "/images/short-fiber-1536.webp"
+      ],
+      "original": "assets/originals/short-fiber-original.png"
+    },
+    {
+      "name": "hurd",
+      "prompt": "Use case: photorealistic-natural. GoldenWood industrial raw materials website. 3:2 macro product photograph of clean hemp hurd chips, pale woody irregular small stem core pieces on warm neutral background. Coherent premium documentary industrial photography, natural light, earthy olive and cream palette, realistic materials. No text, no logos, no watermarks, no recreational cannabis buds, no smoking, no neon. Workers if present wear appropriate PPE. Deliver one separate finished photograph.",
+      "purpose": "Material detail and catalog",
+      "generated": true,
+      "files": [
+        "/images/hurd-640.avif",
+        "/images/hurd-640.webp",
+        "/images/hurd-1280.avif",
+        "/images/hurd-1280.webp",
+        "/images/hurd-1536.avif",
+        "/images/hurd-1536.webp"
+      ],
+      "original": "assets/originals/hurd-original.png"
+    },
+    {
+      "name": "milled-hurd",
+      "prompt": "Use case: photorealistic-natural. GoldenWood industrial raw materials website. 3:2 macro product photograph of crushed hemp hurd fine smaller granular woody fraction on warm neutral background. Coherent premium documentary industrial photography, natural light, earthy olive and cream palette, realistic materials. No text, no logos, no watermarks, no recreational cannabis buds, no smoking, no neon. Workers if present wear appropriate PPE. Deliver one separate finished photograph.",
+      "purpose": "Material detail and catalog",
+      "generated": true,
+      "files": [
+        "/images/milled-hurd-640.avif",
+        "/images/milled-hurd-640.webp",
+        "/images/milled-hurd-1280.avif",
+        "/images/milled-hurd-1280.webp",
+        "/images/milled-hurd-1536.avif",
+        "/images/milled-hurd-1536.webp"
+      ],
+      "original": "assets/originals/milled-hurd-original.png"
+    },
+    {
+      "name": "warehouse",
+      "prompt": "Use case: photorealistic-natural. GoldenWood industrial raw materials website. 3:2 documentary photograph of packaged natural hemp raw materials in plain bulk bags and compressed bales in a spacious industrial warehouse. Coherent premium documentary industrial photography, natural light, earthy olive and cream palette, realistic materials. No text, no logos, no watermarks, no recreational cannabis buds, no smoking, no neon. Workers if present wear appropriate PPE. Deliver one separate finished photograph.",
+      "purpose": "Production and editorial",
+      "generated": true,
+      "files": [
+        "/images/warehouse-640.avif",
+        "/images/warehouse-640.webp",
+        "/images/warehouse-1280.avif",
+        "/images/warehouse-1280.webp",
+        "/images/warehouse-1536.avif",
+        "/images/warehouse-1536.webp"
+      ],
+      "original": "assets/originals/warehouse-original.png"
+    }
+  ]
+}
