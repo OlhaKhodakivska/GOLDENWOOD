@@ -103,3 +103,10 @@ Shared glass-panel opacity is now 0.72 on desktop and 0.64 on mobile (28% and 36
 The yellow navigation and homepage introduction now share one grid wrapper. Its minimum height equals 100svh minus the sticky header; the introduction fills the remaining row after the yellow cards. The introduction anchor points to this combined block. Mobile keeps natural content height so stacked cards and text are not clipped.
 
 Browser measurements in both locales confirm header + combined block = viewport at 1920×1080, 1440×900, 1280×720, 1024×768 and 1440×600. Both mobile pages were also checked at 390×844 without horizontal overflow. Production build and lint pass. Report: [introduction-viewport-checks.json](validation/introduction-viewport-checks.json). Screenshot: [combined desktop view](validation/screenshots/introduction-desktop.png).
+
+
+## Unified editorial text-and-photo screens
+
+The hemp introduction, responsibility overview and grower overview now each contain copy and the following photograph inside one shared chapter. Desktop chapter height equals the viewport minus the header. The corporate copy uses two columns above the image; the hemp composition uses contain to retain all objects. Mobile returns to natural vertical flow.
+
+24 browser measurements cover both languages and all three pages at 1440×900, 1280×720, 1024×600 and 390×844. Desktop chapters equal the available viewport height, photographs remain within the chapter with positive height, copy precedes the photograph without overlap, and no horizontal overflow was detected. Build, lint and all 11 HTTP scenarios pass. Report: [editorial-photo-screen-checks.json](validation/editorial-photo-screen-checks.json). Screenshot: [unified responsibility chapter](validation/screenshots/editorial-photo-screen.png).

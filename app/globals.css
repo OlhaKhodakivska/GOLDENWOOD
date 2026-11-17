@@ -4272,3 +4272,97 @@ h3 {
     padding-block: var(--section-space);
   }
 }
+
+/* Introductory copy and supporting photograph form a single visual chapter. */
+.editorial-photo-screen {
+  min-height: var(--screen-section);
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  gap: 28px;
+  padding-block: clamp(24px, 3.5svh, 42px);
+}
+.editorial-photo-screen > .editorial-sections {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(28px, 4vw, 64px);
+}
+.editorial-photo-screen .editorial-sections > section {
+  display: block;
+  border: 0;
+  padding: 0;
+}
+.editorial-photo-screen .editorial-sections h2 {
+  font-size: clamp(25px, 2.3vw, 32px);
+  margin-bottom: 14px;
+}
+.editorial-photo-screen .editorial-sections p {
+  font-size: 15px;
+  line-height: 1.75;
+}
+.editorial-photo-screen > .after-copy-photo {
+  padding: 0;
+  margin: 0;
+  min-height: 0;
+}
+.editorial-photo-screen > .after-copy-photo > .photo {
+  height: 100%;
+  min-height: 0;
+}
+.editorial-photo-screen > .after-copy-photo img {
+  object-position: center 25%;
+}
+.hemp-photo-screen .hemp-introduction {
+  gap: 16px 44px;
+}
+.hemp-photo-screen .hemp-introduction h2 {
+  font-size: clamp(28px, 2.6vw, 38px);
+}
+.hemp-photo-screen .hemp-introduction > div p {
+  font-size: 15px;
+  line-height: 1.75;
+}
+.hemp-photo-screen .hemp-introduction > div p + p {
+  margin-top: 12px;
+  font-size: 14px;
+}
+.hemp-photo-screen > .after-copy-photo {
+  background: var(--surface-soft);
+}
+.hemp-photo-screen > .after-copy-photo img {
+  object-fit: contain;
+  object-position: center;
+}
+@media (min-width: 851px) {
+  main > .editorial-photo-screen {
+    height: var(--screen-section);
+  }
+}
+@media (max-width: 850px) {
+  main > .editorial-photo-screen {
+    min-height: 0;
+    height: auto;
+    padding-block: var(--section-space);
+  }
+  .editorial-photo-screen {
+    grid-template-rows: auto auto;
+    gap: 26px;
+  }
+  .editorial-photo-screen > .editorial-sections {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .editorial-photo-screen > .after-copy-photo > .photo {
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+  .hemp-photo-screen .hemp-introduction {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .hemp-photo-screen .hemp-introduction > .eyebrow {
+    grid-column: auto;
+  }
+  .hemp-photo-screen > .after-copy-photo > .photo {
+    aspect-ratio: 3 / 2;
+  }
+}

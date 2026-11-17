@@ -1,0 +1,270 @@
+{
+  "checkedAt": "2026-11-17T14:49:57.053Z",
+  "checks": [
+    {
+      "available": 795,
+      "height": 900,
+      "overflow": false,
+      "path": "/uk/hemp",
+      "photoBottom": 763.5,
+      "photoHeight": 507.25,
+      "sectionHeight": 795,
+      "textPhotoGap": 28,
+      "width": 1440
+    },
+    {
+      "available": 795,
+      "height": 900,
+      "overflow": false,
+      "path": "/uk/sustainability",
+      "photoBottom": 763.5,
+      "photoHeight": 571.25,
+      "sectionHeight": 795,
+      "textPhotoGap": 28,
+      "width": 1440
+    },
+    {
+      "available": 795,
+      "height": 900,
+      "overflow": false,
+      "path": "/uk/partners",
+      "photoBottom": 763.5,
+      "photoHeight": 571.25,
+      "sectionHeight": 795,
+      "textPhotoGap": 28,
+      "width": 1440
+    },
+    {
+      "available": 795,
+      "height": 900,
+      "overflow": false,
+      "path": "/en/hemp",
+      "photoBottom": 763.5,
+      "photoHeight": 533.5,
+      "sectionHeight": 795,
+      "textPhotoGap": 28,
+      "width": 1440
+    },
+    {
+      "available": 795,
+      "height": 900,
+      "overflow": false,
+      "path": "/en/sustainability",
+      "photoBottom": 763.5,
+      "photoHeight": 571.25,
+      "sectionHeight": 795,
+      "textPhotoGap": 28,
+      "width": 1440
+    },
+    {
+      "available": 795,
+      "height": 900,
+      "overflow": false,
+      "path": "/en/partners",
+      "photoBottom": 763.5,
+      "photoHeight": 571.25,
+      "sectionHeight": 795,
+      "textPhotoGap": 28,
+      "width": 1440
+    },
+    {
+      "available": 615,
+      "height": 720,
+      "overflow": false,
+      "path": "/uk/hemp",
+      "photoBottom": 589.8125,
+      "photoHeight": 339.875,
+      "sectionHeight": 615,
+      "textPhotoGap": 28,
+      "width": 1280
+    },
+    {
+      "available": 615,
+      "height": 720,
+      "overflow": false,
+      "path": "/uk/sustainability",
+      "photoBottom": 589.8125,
+      "photoHeight": 380.828125,
+      "sectionHeight": 615,
+      "textPhotoGap": 28,
+      "width": 1280
+    },
+    {
+      "available": 615,
+      "height": 720,
+      "overflow": false,
+      "path": "/uk/partners",
+      "photoBottom": 589.8125,
+      "photoHeight": 407.078125,
+      "sectionHeight": 615,
+      "textPhotoGap": 28,
+      "width": 1280
+    },
+    {
+      "available": 615,
+      "height": 720,
+      "overflow": false,
+      "path": "/en/hemp",
+      "photoBottom": 589.8125,
+      "photoHeight": 339.875,
+      "sectionHeight": 615,
+      "textPhotoGap": 28,
+      "width": 1280
+    },
+    {
+      "available": 615,
+      "height": 720,
+      "overflow": false,
+      "path": "/en/sustainability",
+      "photoBottom": 589.8125,
+      "photoHeight": 407.078125,
+      "sectionHeight": 615,
+      "textPhotoGap": 28,
+      "width": 1280
+    },
+    {
+      "available": 615,
+      "height": 720,
+      "overflow": false,
+      "path": "/en/partners",
+      "photoBottom": 589.8125,
+      "photoHeight": 407.078125,
+      "sectionHeight": 615,
+      "textPhotoGap": 28,
+      "width": 1280
+    },
+    {
+      "available": 495,
+      "height": 600,
+      "overflow": false,
+      "path": "/uk/hemp",
+      "photoBottom": 471,
+      "photoHeight": 171.5,
+      "sectionHeight": 495,
+      "textPhotoGap": 28,
+      "width": 1024
+    },
+    {
+      "available": 495,
+      "height": 600,
+      "overflow": false,
+      "path": "/uk/sustainability",
+      "photoBottom": 471,
+      "photoHeight": 237.5,
+      "sectionHeight": 495,
+      "textPhotoGap": 28,
+      "width": 1024
+    },
+    {
+      "available": 495,
+      "height": 600,
+      "overflow": false,
+      "path": "/uk/partners",
+      "photoBottom": 471,
+      "photoHeight": 268.75,
+      "sectionHeight": 495,
+      "textPhotoGap": 28,
+      "width": 1024
+    },
+    {
+      "available": 495,
+      "height": 600,
+      "overflow": false,
+      "path": "/en/hemp",
+      "photoBottom": 471,
+      "photoHeight": 197.75,
+      "sectionHeight": 495,
+      "textPhotoGap": 28,
+      "width": 1024
+    },
+    {
+      "available": 495,
+      "height": 600,
+      "overflow": false,
+      "path": "/en/sustainability",
+      "photoBottom": 471,
+      "photoHeight": 268.75,
+      "sectionHeight": 495,
+      "textPhotoGap": 28,
+      "width": 1024
+    },
+    {
+      "available": 495,
+      "height": 600,
+      "overflow": false,
+      "path": "/en/partners",
+      "photoBottom": 471,
+      "photoHeight": 268.75,
+      "sectionHeight": 495,
+      "textPhotoGap": 28,
+      "width": 1024
+    },
+    {
+      "available": 763,
+      "height": 844,
+      "overflow": false,
+      "path": "/uk/hemp",
+      "photoBottom": 711.53125,
+      "photoHeight": 226,
+      "sectionHeight": 749.53125,
+      "textPhotoGap": 26,
+      "width": 390
+    },
+    {
+      "available": 763,
+      "height": 844,
+      "overflow": false,
+      "path": "/uk/sustainability",
+      "photoBottom": 724.4375,
+      "photoHeight": 190.6875,
+      "sectionHeight": 762.4375,
+      "textPhotoGap": 26,
+      "width": 390
+    },
+    {
+      "available": 763,
+      "height": 844,
+      "overflow": false,
+      "path": "/uk/partners",
+      "photoBottom": 635.6875,
+      "photoHeight": 190.6875,
+      "sectionHeight": 673.6875,
+      "textPhotoGap": 26,
+      "width": 390
+    },
+    {
+      "available": 763,
+      "height": 844,
+      "overflow": false,
+      "path": "/en/hemp",
+      "photoBottom": 685.28125,
+      "photoHeight": 226,
+      "sectionHeight": 723.28125,
+      "textPhotoGap": 26,
+      "width": 390
+    },
+    {
+      "available": 763,
+      "height": 844,
+      "overflow": false,
+      "path": "/en/sustainability",
+      "photoBottom": 583.1875,
+      "photoHeight": 190.6875,
+      "sectionHeight": 621.1875,
+      "textPhotoGap": 26,
+      "width": 390
+    },
+    {
+      "available": 763,
+      "height": 844,
+      "overflow": false,
+      "path": "/en/partners",
+      "photoBottom": 640.6875,
+      "photoHeight": 190.6875,
+      "sectionHeight": 678.6875,
+      "textPhotoGap": 26,
+      "width": 390
+    }
+  ],
+  "passed": true
+}

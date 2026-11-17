@@ -24,40 +24,42 @@ export default function HempPage({ locale }: { locale: Locale }) {
             : "One plant. A world of considered objects. Explore how fiber, hurd and seeds become part of everyday life."
         }
       />
-      <Reveal className="section hemp-introduction">
-        <span className="eyebrow">
-          {uk
-            ? "РОСЛИНА З ВЕЛИКИМ ПОТЕНЦІАЛОМ"
-            : "A PLANT WITH GREAT POTENTIAL"}
-        </span>
-        <h2>
-          {uk
-            ? "Більше, ніж сировина.\nІнший погляд на звичні речі."
-            : "More than a raw material.\nA fresh view of familiar things."}
-        </h2>
-        <div>
-          <p>
+      <section className="section editorial-photo-screen hemp-photo-screen">
+        <Reveal className="hemp-introduction">
+          <span className="eyebrow">
             {uk
-              ? "Технічні коноплі вирощують заради різних частин рослини: зовнішнього волокна, деревинної серцевини та насіння. Кожна з них має власний шлях — у тканину, композит, будівельну суміш чи харчовий інгредієнт."
-              : "Industrial hemp is grown for different parts of the plant: outer fiber, woody core and seed. Each follows its own path into fabric, a composite, a building mixture or a food ingredient."}
-          </p>
-          <p>
+              ? "РОСЛИНА З ВЕЛИКИМ ПОТЕНЦІАЛОМ"
+              : "A PLANT WITH GREAT POTENTIAL"}
+          </span>
+          <h2>
             {uk
-              ? "Це огляд можливостей галузі. GoldenWood пропонує сировину та технічний діалог; готові речі нижче ілюструють потенціал подальшої переробки, а не асортимент готової продукції холдингу."
-              : "This is an overview of industry possibilities. GoldenWood offers raw materials and a technical conversation; the finished objects below illustrate further processing potential rather than a range of finished products sold by the holding."}
-          </p>
+              ? "Більше, ніж сировина.\nІнший погляд на звичні речі."
+              : "More than a raw material.\nA fresh view of familiar things."}
+          </h2>
+          <div>
+            <p>
+              {uk
+                ? "Технічні коноплі вирощують заради різних частин рослини: зовнішнього волокна, деревинної серцевини та насіння. Кожна з них має власний шлях — у тканину, композит, будівельну суміш чи харчовий інгредієнт."
+                : "Industrial hemp is grown for different parts of the plant: outer fiber, woody core and seed. Each follows its own path into fabric, a composite, a building mixture or a food ingredient."}
+            </p>
+            <p>
+              {uk
+                ? "Це огляд можливостей галузі. GoldenWood пропонує сировину та технічний діалог; готові речі нижче ілюструють потенціал подальшої переробки, а не асортимент готової продукції холдингу."
+                : "This is an overview of industry possibilities. GoldenWood offers raw materials and a technical conversation; the finished objects below illustrate further processing potential rather than a range of finished products sold by the holding."}
+            </p>
+          </div>
+        </Reveal>
+        <div className="wide-photo hemp-page-photo after-copy-photo">
+          <Photo
+            name="hemp-possibilities"
+            alt={
+              uk
+                ? "Концептуальна композиція: шкарпетки, тканина, чохол, будівельний зразок, папір і насіння"
+                : "Conceptual arrangement of socks, fabric, a phone case, building sample, paper and hemp seeds"
+            }
+          />
         </div>
-      </Reveal>
-      <div className="wide-photo hemp-page-photo after-copy-photo">
-        <Photo
-          name="hemp-possibilities"
-          alt={
-            uk
-              ? "Концептуальна композиція: шкарпетки, тканина, чохол, будівельний зразок, папір і насіння"
-              : "Conceptual arrangement of socks, fabric, a phone case, building sample, paper and hemp seeds"
-          }
-        />
-      </div>
+      </section>
       <section className="section possibilities-section">
         <SectionIntro
           eyebrow={
