@@ -1,0 +1,94 @@
+{
+  "checkedAt": "2026-11-17T14:57:21.944Z",
+  "checks": [
+    {
+      "available": 795,
+      "height": 900,
+      "link": "/uk/request?type=grower",
+      "overflow": false,
+      "panelWithinSection": true,
+      "path": "/uk/partners",
+      "sectionHeight": 795,
+      "topics": 4,
+      "width": 1440
+    },
+    {
+      "available": 795,
+      "height": 900,
+      "link": "/en/request?type=grower",
+      "overflow": false,
+      "panelWithinSection": true,
+      "path": "/en/partners",
+      "sectionHeight": 795,
+      "topics": 4,
+      "width": 1440
+    },
+    {
+      "available": 615,
+      "height": 720,
+      "link": "/uk/request?type=grower",
+      "overflow": false,
+      "panelWithinSection": true,
+      "path": "/uk/partners",
+      "sectionHeight": 615,
+      "topics": 4,
+      "width": 1280
+    },
+    {
+      "available": 615,
+      "height": 720,
+      "link": "/en/request?type=grower",
+      "overflow": false,
+      "panelWithinSection": true,
+      "path": "/en/partners",
+      "sectionHeight": 615,
+      "topics": 4,
+      "width": 1280
+    },
+    {
+      "available": 495,
+      "height": 600,
+      "link": "/uk/request?type=grower",
+      "overflow": false,
+      "panelWithinSection": true,
+      "path": "/uk/partners",
+      "sectionHeight": 495,
+      "topics": 4,
+      "width": 1024
+    },
+    {
+      "available": 495,
+      "height": 600,
+      "link": "/en/request?type=grower",
+      "overflow": false,
+      "panelWithinSection": true,
+      "path": "/en/partners",
+      "sectionHeight": 495,
+      "topics": 4,
+      "width": 1024
+    },
+    {
+      "available": 763,
+      "height": 844,
+      "link": "/uk/request?type=grower",
+      "overflow": false,
+      "panelWithinSection": true,
+      "path": "/uk/partners",
+      "sectionHeight": 870.21875,
+      "topics": 4,
+      "width": 390
+    },
+    {
+      "available": 763,
+      "height": 844,
+      "link": "/en/request?type=grower",
+      "overflow": false,
+      "panelWithinSection": true,
+      "path": "/en/partners",
+      "sectionHeight": 861.671875,
+      "topics": 4,
+      "width": 390
+    }
+  ],
+  "passed": true
+}

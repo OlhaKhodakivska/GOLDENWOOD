@@ -4366,3 +4366,122 @@ h3 {
     aspect-ratio: 3 / 2;
   }
 }
+
+/* A useful grower invitation, grounded in the landscape rather than empty space. */
+.grower-inquiry {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-block: 36px;
+  color: var(--cream);
+  background: var(--forest);
+}
+.grower-inquiry-visual {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+.grower-inquiry-visual .photo {
+  width: 100%;
+  height: 100%;
+}
+.grower-inquiry-visual img {
+  object-position: center;
+}
+.grower-inquiry-panel {
+  width: min(920px, 100%);
+}
+.grower-inquiry-panel h2 {
+  margin-top: 18px;
+  font-size: clamp(30px, 3vw, 42px);
+}
+.grower-inquiry-panel > p {
+  margin-block: 18px 24px;
+  font-size: 16px;
+  line-height: 1.75;
+}
+.grower-inquiry-topics {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px 32px;
+  margin: 0 0 26px;
+}
+.grower-inquiry-topics > div {
+  padding-top: 14px;
+  border-top: 1px solid rgb(247 248 238 / 35%);
+}
+.grower-inquiry-topics dt {
+  font-size: 16px;
+  font-weight: 600;
+}
+.grower-inquiry-topics dd {
+  margin: 6px 0 0;
+  font-size: 14px;
+  line-height: 1.7;
+}
+.grower-inquiry .button {
+  background: var(--sunflower);
+  color: var(--forest);
+  border-color: var(--sunflower);
+}
+.grower-inquiry .button:hover {
+  background: var(--sunflower-hover);
+  border-color: var(--sunflower-hover);
+}
+@media (max-width: 600px) {
+  .grower-inquiry {
+    padding-block: 28px;
+  }
+  .grower-inquiry-panel h2 {
+    font-size: 29px;
+  }
+  .grower-inquiry-panel .eyebrow {
+    justify-content: center;
+    font-size: 9px;
+  }
+  .grower-inquiry-panel > p {
+    font-size: 15px;
+  }
+  .grower-inquiry-topics {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    text-align: left;
+  }
+  .grower-inquiry-panel .button {
+    width: 100%;
+  }
+}
+@media (min-width: 601px) and (max-height: 760px) {
+  .grower-inquiry {
+    padding-block: 24px;
+  }
+  .grower-inquiry-panel {
+    padding: 24px 30px;
+  }
+  .grower-inquiry-panel h2 {
+    font-size: 30px;
+    margin-top: 12px;
+  }
+  .grower-inquiry-panel > p {
+    font-size: 15px;
+    margin-block: 12px 16px;
+  }
+  .grower-inquiry-topics {
+    gap: 12px 28px;
+    margin-bottom: 18px;
+  }
+  .grower-inquiry-topics > div {
+    padding-top: 10px;
+  }
+  .grower-inquiry-topics dt {
+    font-size: 15px;
+  }
+  .grower-inquiry-topics dd {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+}

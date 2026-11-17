@@ -255,20 +255,61 @@ export function Corporate({ locale, slug }: { locale: Locale; slug: string }) {
         )}
       </div>
       {slug === "partners" && (
-        <section className="section sample-section">
-          <h2>
-            {uk
-              ? "Розкажіть про ваше господарство."
-              : "Tell us about your farm."}
-          </h2>
-          <p>
-            {uk
-              ? "Регіон, досвід, техніка й очікування — достатньо для початку розмови."
-              : "Region, experience, equipment and expectations are enough to start a conversation."}
-          </p>
-          <Button href={`/${locale}/request?type=grower`}>
-            {uk ? "Запит щодо вирощування" : "Grower inquiry"}
-          </Button>
+        <section className="section sample-section grower-inquiry">
+          <div className="grower-inquiry-visual" aria-hidden="true">
+            <Photo name="page-contacts" alt="" sizes="100vw" />
+          </div>
+          <div className="page-heading-content grower-inquiry-panel">
+            <span className="eyebrow">
+              {uk ? "ПОЧНІМО З ВАШОГО ПОЛЯ" : "LET’S START WITH YOUR FIELD"}
+            </span>
+            <h2>
+              {uk
+                ? "Розкажіть про ваше господарство."
+                : "Tell us about your farm."}
+            </h2>
+            <p>
+              {uk
+                ? "Для першої розмови достатньо орієнтовних даних. Вони допоможуть зрозуміти ваші умови й підготувати запитання для обговорення співпраці."
+                : "Approximate details are enough for an initial conversation. They help us understand your conditions and prepare questions for discussing a potential partnership."}
+            </p>
+            <dl className="grower-inquiry-topics">
+              {[
+                [
+                  uk ? "Регіон і площа" : "Location and acreage",
+                  uk
+                    ? "Де розташовані поля та яку площу ви розглядаєте."
+                    : "Where your fields are and the area you are considering.",
+                ],
+                [
+                  uk ? "Досвід і культури" : "Experience and crops",
+                  uk
+                    ? "Що вирощуєте зараз і чи працювали з технічними коноплями."
+                    : "What you currently grow and any experience with industrial hemp.",
+                ],
+                [
+                  uk ? "Техніка й зберігання" : "Machinery and storage",
+                  uk
+                    ? "Яке обладнання та умови для підготовки й зберігання маєте."
+                    : "The equipment and preparation or storage facilities you have.",
+                ],
+                [
+                  uk ? "Ваші очікування" : "Your expectations",
+                  uk
+                    ? "Що цікавить: вирощування, підготовка сировини чи постачання."
+                    : "Your interest in growing, preparing raw materials or supplying them.",
+                ],
+              ].map(([title, body]) => (
+                <div key={title}>
+                  <dt>{title}</dt>
+                  <dd>{body}</dd>
+                </div>
+              ))}
+            </dl>
+            <Button href={`/${locale}/request?type=grower`}>
+              {uk ? "Запит щодо вирощування" : "Grower inquiry"}
+            </Button>
+          </div>
         </section>
       )}
       {slug === "sustainability" && <ForestSupport locale={locale} />}

@@ -110,3 +110,10 @@ Browser measurements in both locales confirm header + combined block = viewport 
 The hemp introduction, responsibility overview and grower overview now each contain copy and the following photograph inside one shared chapter. Desktop chapter height equals the viewport minus the header. The corporate copy uses two columns above the image; the hemp composition uses contain to retain all objects. Mobile returns to natural vertical flow.
 
 24 browser measurements cover both languages and all three pages at 1440×900, 1280×720, 1024×600 and 390×844. Desktop chapters equal the available viewport height, photographs remain within the chapter with positive height, copy precedes the photograph without overlap, and no horizontal overflow was detected. Build, lint and all 11 HTTP scenarios pass. Report: [editorial-photo-screen-checks.json](validation/editorial-photo-screen-checks.json). Screenshot: [unified responsibility chapter](validation/screenshots/editorial-photo-screen.png).
+
+
+## Grower invitation composition
+
+The formerly sparse grower inquiry section now uses the existing page-contacts landscape as a decorative background and the shared translucent glass panel. Four bilingual prompts describe location/acreage, experience/crops, machinery/storage and expectations. The CTA retains the localized /request?type=grower destination.
+
+Eight browser measurements cover both locales at 1440×900, 1280×720, 1024×600 and 390×844: the panel stays within its section and there is no horizontal overflow. Desktop section heights equal the viewport minus the header; mobile uses natural height. A desktop visual check and text-line collision scan passed. Production build, lint and all 11 HTTP scenarios pass. Reports: [grower-invitation-checks.json](validation/grower-invitation-checks.json), [screenshot](validation/screenshots/grower-invitation.png).
