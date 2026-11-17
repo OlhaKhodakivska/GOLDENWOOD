@@ -96,3 +96,10 @@ Final browser geometry run explicitly sets and asserts each new tab's viewport: 
 ## Increased glass transparency
 
 Shared glass-panel opacity is now 0.72 on desktop and 0.64 on mobile (28% and 36% background transparency). This applies to the homepage and every internal page header. Backdrop blur remains local to the reading panel. The homepage heading accent uses the existing sunflower yellow to preserve legibility at the lower opacity. Against a white photograph behind the mobile panel, cream body text is approximately 4.58:1 and the large yellow accent is 3.26:1. All 30 selected contrast checks and the production build pass.
+
+
+## Shared highlights and introduction viewport
+
+The yellow navigation and homepage introduction now share one grid wrapper. Its minimum height equals 100svh minus the sticky header; the introduction fills the remaining row after the yellow cards. The introduction anchor points to this combined block. Mobile keeps natural content height so stacked cards and text are not clipped.
+
+Browser measurements in both locales confirm header + combined block = viewport at 1920×1080, 1440×900, 1280×720, 1024×768 and 1440×600. Both mobile pages were also checked at 390×844 without horizontal overflow. Production build and lint pass. Report: [introduction-viewport-checks.json](validation/introduction-viewport-checks.json). Screenshot: [combined desktop view](validation/screenshots/introduction-desktop.png).

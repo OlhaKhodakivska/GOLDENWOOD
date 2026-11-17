@@ -1,0 +1,115 @@
+{
+  "checkedAt": "2026-11-17T14:46:29.791Z",
+  "checks": [
+    {
+      "group": 975,
+      "header": 105,
+      "height": 1080,
+      "overflow": false,
+      "path": "/uk",
+      "total": 1080,
+      "width": 1920
+    },
+    {
+      "group": 795,
+      "header": 105,
+      "height": 900,
+      "overflow": false,
+      "path": "/uk",
+      "total": 900,
+      "width": 1440
+    },
+    {
+      "group": 615,
+      "header": 105,
+      "height": 720,
+      "overflow": false,
+      "path": "/uk",
+      "total": 720,
+      "width": 1280
+    },
+    {
+      "group": 663,
+      "header": 105,
+      "height": 768,
+      "overflow": false,
+      "path": "/uk",
+      "total": 768,
+      "width": 1024
+    },
+    {
+      "group": 495,
+      "header": 105,
+      "height": 600,
+      "overflow": false,
+      "path": "/uk",
+      "total": 600,
+      "width": 1440
+    },
+    {
+      "group": 875.328125,
+      "header": 81,
+      "height": 844,
+      "overflow": false,
+      "path": "/uk",
+      "total": 956.328125,
+      "width": 390
+    },
+    {
+      "group": 975,
+      "header": 105,
+      "height": 1080,
+      "overflow": false,
+      "path": "/en",
+      "total": 1080,
+      "width": 1920
+    },
+    {
+      "group": 795,
+      "header": 105,
+      "height": 900,
+      "overflow": false,
+      "path": "/en",
+      "total": 900,
+      "width": 1440
+    },
+    {
+      "group": 615,
+      "header": 105,
+      "height": 720,
+      "overflow": false,
+      "path": "/en",
+      "total": 720,
+      "width": 1280
+    },
+    {
+      "group": 663,
+      "header": 105,
+      "height": 768,
+      "overflow": false,
+      "path": "/en",
+      "total": 768,
+      "width": 1024
+    },
+    {
+      "group": 495,
+      "header": 105,
+      "height": 600,
+      "overflow": false,
+      "path": "/en",
+      "total": 600,
+      "width": 1440
+    },
+    {
+      "group": 791.328125,
+      "header": 81,
+      "height": 844,
+      "overflow": false,
+      "path": "/en",
+      "total": 872.328125,
+      "width": 390
+    }
+  ],
+  "passed": true,
+  "note": "Desktop header plus highlight navigation plus introduction equals the viewport. Mobile retains natural content height to avoid clipping stacked cards and copy."
+}

@@ -73,78 +73,82 @@ export default function Home({ locale }: { locale: Locale }) {
           </a>
         </div>
       </section>
-      <nav
-        className="resource-highlights"
-        aria-label={uk ? "Знайомство з GoldenWood" : "Discover GoldenWood"}
-      >
-        {[
-          {
-            label: uk
-              ? "Багато можливостей однієї рослини"
-              : "One plant, many possibilities",
-            note: uk
-              ? "Познайомтеся з технічними коноплями"
-              : "Get to know industrial hemp",
-            href: `/${locale}/hemp`,
-          },
-          {
-            label: uk
-              ? "Матеріали для вашого виробництва"
-              : "Materials for your production",
-            note: uk ? "Волокно, костриця та насіння" : "Fiber, hurd and seeds",
-            href: `/${locale}/products`,
-          },
-          {
-            label: uk ? "Від поля до постачання" : "From field to supply",
-            note: uk
-              ? "Дослідіть шлях сировини"
-              : "Explore the material journey",
-            href: `/${locale}/production`,
-          },
-        ].map((item) => (
-          <Link key={item.href} href={item.href}>
-            <span className="resource-label">{item.label}</span>
-            <span className="resource-note">{item.note}</span>
-          </Link>
-        ))}
-      </nav>
-      <section className="section intro-section reveal" id="introduction">
-        <div>
-          <span className="eyebrow">
-            <i /> {uk ? "МИ — GOLDENWOOD" : "WE ARE GOLDENWOOD"}
-          </span>
-          <h2>
-            {uk ? (
-              <>
-                Природний потенціал.
-                <br />
-                <span className="muted">Промисловий підхід.</span>
-              </>
-            ) : (
-              <>
-                Natural potential.
-                <br />
-                <span className="muted">An industrial approach.</span>
-              </>
-            )}
-          </h2>
-        </div>
-        <div className="intro-copy">
-          <p>
-            {uk
-              ? "Ми поєднуємо агровиробництво та технології первинної переробки, щоб перетворювати технічні коноплі на зрозумілу, підготовлену сировину для бізнесу."
-              : "We connect agriculture and primary processing technology to turn industrial hemp into clearly specified, prepared raw materials for business."}
-          </p>
-          <p className="small-copy">
-            {uk
-              ? "Від рішення в полі до характеристик партії — бачимо весь шлях матеріалу та його місце у вашому виробництві."
-              : "From field decisions to batch characteristics, we consider the entire journey of the material and its role in your production."}
-          </p>
-          <Link className="text-link" href={`/${locale}/about`}>
-            {uk ? "Більше про холдинг" : "About the holding"}
-          </Link>
-        </div>
-      </section>
+      <div className="introduction-screen" id="introduction">
+        <nav
+          className="resource-highlights"
+          aria-label={uk ? "Знайомство з GoldenWood" : "Discover GoldenWood"}
+        >
+          {[
+            {
+              label: uk
+                ? "Багато можливостей однієї рослини"
+                : "One plant, many possibilities",
+              note: uk
+                ? "Познайомтеся з технічними коноплями"
+                : "Get to know industrial hemp",
+              href: `/${locale}/hemp`,
+            },
+            {
+              label: uk
+                ? "Матеріали для вашого виробництва"
+                : "Materials for your production",
+              note: uk
+                ? "Волокно, костриця та насіння"
+                : "Fiber, hurd and seeds",
+              href: `/${locale}/products`,
+            },
+            {
+              label: uk ? "Від поля до постачання" : "From field to supply",
+              note: uk
+                ? "Дослідіть шлях сировини"
+                : "Explore the material journey",
+              href: `/${locale}/production`,
+            },
+          ].map((item) => (
+            <Link key={item.href} href={item.href}>
+              <span className="resource-label">{item.label}</span>
+              <span className="resource-note">{item.note}</span>
+            </Link>
+          ))}
+        </nav>
+        <section className="section intro-section reveal">
+          <div>
+            <span className="eyebrow">
+              <i /> {uk ? "МИ — GOLDENWOOD" : "WE ARE GOLDENWOOD"}
+            </span>
+            <h2>
+              {uk ? (
+                <>
+                  Природний потенціал.
+                  <br />
+                  <span className="muted">Промисловий підхід.</span>
+                </>
+              ) : (
+                <>
+                  Natural potential.
+                  <br />
+                  <span className="muted">An industrial approach.</span>
+                </>
+              )}
+            </h2>
+          </div>
+          <div className="intro-copy">
+            <p>
+              {uk
+                ? "Ми поєднуємо агровиробництво та технології первинної переробки, щоб перетворювати технічні коноплі на зрозумілу, підготовлену сировину для бізнесу."
+                : "We connect agriculture and primary processing technology to turn industrial hemp into clearly specified, prepared raw materials for business."}
+            </p>
+            <p className="small-copy">
+              {uk
+                ? "Від рішення в полі до характеристик партії — бачимо весь шлях матеріалу та його місце у вашому виробництві."
+                : "From field decisions to batch characteristics, we consider the entire journey of the material and its role in your production."}
+            </p>
+            <Link className="text-link" href={`/${locale}/about`}>
+              {uk ? "Більше про холдинг" : "About the holding"}
+            </Link>
+          </div>
+        </section>
+      </div>
       <section className="section process-section reveal">
         <div className="section-heading">
           <SectionIntro
