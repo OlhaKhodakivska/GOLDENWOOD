@@ -235,9 +235,11 @@ export function Corporate({ locale, slug }: { locale: Locale; slug: string }) {
                 : "RESPONSIBILITY"
         }
       />
-      <div className="wide-photo">
-        <Photo name={p.image} alt={p.title[locale]} />
-      </div>
+      {slug !== "about" && (
+        <div className="wide-photo">
+          <Photo name={p.image} alt={p.title[locale]} />
+        </div>
+      )}
       <div className="section editorial-sections">
         {p.sections.map((s, i) => (
           <section key={i}>
