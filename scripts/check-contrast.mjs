@@ -86,7 +86,7 @@ const glassBackground =
     .join("")
     .toUpperCase();
 for (const [role, fg, minimum] of [
-  ["Hero: лаймовий великий заголовок", "gold", 3],
+  ["Hero: жовтий великий заголовок", "sunflower", 3],
   ["Hero: світлий основний текст", "cream", 4.5],
 ]) {
   const ratio = contrast(color(fg), glassBackground);

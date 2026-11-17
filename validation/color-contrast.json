@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-17T14:25:14.366Z",
+  "checkedAt": "2026-11-17T14:33:15.939Z",
   "palette": {
     "forest": "#2E4600",
     "grassland": "#486B00",
@@ -234,18 +234,18 @@
       "pass": true
     },
     {
-      "role": "Hero: лаймовий великий заголовок",
-      "foreground": "#A2C523",
-      "background": "#566350",
-      "ratio": 3.2,
+      "role": "Hero: жовтий великий заголовок",
+      "foreground": "#FBCD4B",
+      "background": "#697463",
+      "ratio": 3.257,
       "minimum": 3,
       "pass": true
     },
     {
       "role": "Hero: світлий основний текст",
       "foreground": "#F7F8EE",
-      "background": "#566350",
-      "ratio": 5.951,
+      "background": "#697463",
+      "ratio": 4.584,
       "minimum": 4.5,
       "pass": true
     }

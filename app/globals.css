@@ -3459,7 +3459,7 @@ select:focus-visible,
   color: var(--cream);
 }
 .hero h1 em {
-  color: var(--gold);
+  color: var(--sunflower);
 }
 .reading-progress {
   background: var(--bronze);
@@ -3864,8 +3864,8 @@ button.button[type="submit"]:hover {
   --screen-section: calc(100svh - var(--header-height));
   --section-space: clamp(48px, 5vw, 80px);
   --hero-glass-rgb: 20 38 12;
-  --hero-glass-opacity: 0.86;
-  --hero-glass-opacity-mobile: 0.72;
+  --hero-glass-opacity: 0.72;
+  --hero-glass-opacity-mobile: 0.64;
 }
 body {
   font-size: 16px;

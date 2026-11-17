@@ -91,3 +91,8 @@ All internal headings, including product details, article details, request and l
 Production build, lint, TypeScript and **11 HTTP integration scenarios** pass. The additional scenario verifies the expected thematic background, decorative alt text, full-width responsive source and single H1 on all internal localized routes. All 144 optimized image files return HTTP 200; the internal-link crawl still covers 44 pages without failures. All 30 semantic contrast checks pass.
 
 Final browser geometry run explicitly sets and asserts each new tab's viewport: **44 routes at 390×844 and the same 44 routes at 1440×900**. No visible heading/paragraph line collisions or horizontal document overflow were detected. Closed native disclosure content is excluded. Report: [page-background-checks.json](validation/page-background-checks.json). This is a geometry check, not a full accessibility audit. Visual spot checks cover the holding background on desktop/mobile and the applications header; background originals were also inspected.
+
+
+## Increased glass transparency
+
+Shared glass-panel opacity is now 0.72 on desktop and 0.64 on mobile (28% and 36% background transparency). This applies to the homepage and every internal page header. Backdrop blur remains local to the reading panel. The homepage heading accent uses the existing sunflower yellow to preserve legibility at the lower opacity. Against a white photograph behind the mobile panel, cream body text is approximately 4.58:1 and the large yellow accent is 3.26:1. All 30 selected contrast checks and the production build pass.
