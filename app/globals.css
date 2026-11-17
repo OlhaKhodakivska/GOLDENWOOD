@@ -4234,3 +4234,9 @@ h3 {
     margin-bottom: 20px;
   }
 }
+
+/* Editorial photographs follow their introduction before the next chapter. */
+.after-copy-photo {
+  margin-top: 0;
+  margin-bottom: var(--section-space);
+}

@@ -235,11 +235,6 @@ export function Corporate({ locale, slug }: { locale: Locale; slug: string }) {
                 : "RESPONSIBILITY"
         }
       />
-      {slug !== "about" && (
-        <div className="wide-photo">
-          <Photo name={p.image} alt={p.title[locale]} />
-        </div>
-      )}
       <div className="section editorial-sections">
         {p.sections.map((s, i) => (
           <section key={i}>
@@ -248,6 +243,11 @@ export function Corporate({ locale, slug }: { locale: Locale; slug: string }) {
           </section>
         ))}
       </div>
+      {slug !== "about" && (
+        <div className="wide-photo after-copy-photo">
+          <Photo name={p.image} alt={p.title[locale]} />
+        </div>
+      )}
       {slug === "partners" && (
         <section className="section sample-section">
           <h2>

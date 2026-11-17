@@ -24,16 +24,6 @@ export default function HempPage({ locale }: { locale: Locale }) {
             : "One plant. A world of considered objects. Explore how fiber, hurd and seeds become part of everyday life."
         }
       />
-      <div className="wide-photo hemp-page-photo">
-        <Photo
-          name="hemp-possibilities"
-          alt={
-            uk
-              ? "Концептуальна композиція: шкарпетки, тканина, чохол, будівельний зразок, папір і насіння"
-              : "Conceptual arrangement of socks, fabric, a phone case, building sample, paper and hemp seeds"
-          }
-        />
-      </div>
       <Reveal className="section hemp-introduction">
         <span className="eyebrow">
           {uk
@@ -58,6 +48,16 @@ export default function HempPage({ locale }: { locale: Locale }) {
           </p>
         </div>
       </Reveal>
+      <div className="wide-photo hemp-page-photo after-copy-photo">
+        <Photo
+          name="hemp-possibilities"
+          alt={
+            uk
+              ? "Концептуальна композиція: шкарпетки, тканина, чохол, будівельний зразок, папір і насіння"
+              : "Conceptual arrangement of socks, fabric, a phone case, building sample, paper and hemp seeds"
+          }
+        />
+      </div>
       <section className="section possibilities-section">
         <SectionIntro
           eyebrow={
