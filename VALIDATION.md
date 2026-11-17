@@ -13,7 +13,7 @@ This report distinguishes automated HTTP checks from browser interaction checks.
 | `npm run lint`           | Passed    | ESLint, React Hooks, Next.js, and JSX accessibility rules                                                  |
 | `npm test`               | 12 passed | Shared validation, API request limits, origin/content checks, demo mode, and mocked live-delivery outcomes |
 | `npm run test:e2e`       | 11 passed | HTTP integration scenarios against the production server                                                   |
-| `npm run check:links`    | Passed    | 44 pages, 152 distinct links, 86 internal targets, 64 fragment checks                                      |
+| `npm run check:links`    | Passed    | 44 pages, 154 distinct links, 86 internal targets, 66 fragment checks                                      |
 | `npm run check:contrast` | 30 passed | Selected semantic foreground/background pairs                                                              |
 
 HTTP integration checks cover localized routes and 404 responses, one H1 and correct document language, language-switch URLs, query-based filters, material selection passed into the inquiry form, image/font responses, and a same-origin demo POST.
@@ -117,3 +117,10 @@ The hemp introduction, responsibility overview and grower overview now each cont
 The formerly sparse grower inquiry section now uses the existing page-contacts landscape as a decorative background and the shared translucent glass panel. Four bilingual prompts describe location/acreage, experience/crops, machinery/storage and expectations. The CTA retains the localized /request?type=grower destination.
 
 Eight browser measurements cover both locales at 1440×900, 1280×720, 1024×600 and 390×844: the panel stays within its section and there is no horizontal overflow. Desktop section heights equal the viewport minus the header; mobile uses natural height. A desktop visual check and text-line collision scan passed. Production build, lint and all 11 HTTP scenarios pass. Reports: [grower-invitation-checks.json](validation/grower-invitation-checks.json), [screenshot](validation/screenshots/grower-invitation.png).
+
+
+## Inquiry scroll indicator
+
+The inquiry cover has a centered sunflower-yellow down-arrow link in a small dark glass circle. It gently pulses and moves down over a 2.2-second cycle; prefers-reduced-motion disables the animation. The localized accessible link targets #inquiry-form-section. Extra bottom padding reserves its own space below the reading panel.
+
+Six browser checks cover both locales at 1440×900, 1024×600 and 390×844: the control is exactly centered, remains inside the cover and does not overlap the reading panel. Clicking the English mobile cue opened the fragment with the form section at 110 px, below the 81 px header. Production build, lint and the 44-page link crawl pass (154 distinct links, 66 fragment targets). Report: [scroll-cue-checks.json](validation/scroll-cue-checks.json). Screenshot: [inquiry scroll cue](validation/screenshots/request-scroll-cue.png). The reduced-motion CSS override was inspected; no fresh system preference toggle is asserted.

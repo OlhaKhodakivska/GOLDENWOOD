@@ -20,6 +20,7 @@ import {
 } from "./ui";
 import { ProductFilters, FAQAccordion } from "./Interactive";
 import InquiryForm from "./InquiryForm";
+import { ArrowDown } from "./icons";
 import {
   pageBackgrounds,
   type PageBackground,
@@ -32,6 +33,7 @@ export function PageHeading({
   className = "",
   background = "page-about",
   breadcrumbs,
+  scrollTarget,
 }: {
   locale: Locale;
   title: string;
@@ -40,9 +42,12 @@ export function PageHeading({
   className?: string;
   background?: PageBackground;
   breadcrumbs?: { label: string; href?: string }[];
+  scrollTarget?: string;
 }) {
   return (
-    <div className={`page-heading page-heading-photo ${className}`}>
+    <div
+      className={`page-heading page-heading-photo ${scrollTarget ? "page-heading-has-cue" : ""} ${className}`}
+    >
       <div className="page-heading-visual" aria-hidden="true">
         <Photo name={background} alt="" priority sizes="100vw" />
       </div>
@@ -60,6 +65,20 @@ export function PageHeading({
         <h1>{title}</h1>
         {intro && <p>{intro}</p>}
       </div>
+      {scrollTarget && (
+        <a
+          className="page-scroll-cue"
+          href={`#${scrollTarget}`}
+          aria-label={
+            locale === "uk"
+              ? "Прокрутити до форми запиту"
+              : "Scroll to the inquiry form"
+          }
+          title={locale === "uk" ? "Форма запиту нижче" : "Inquiry form below"}
+        >
+          <ArrowDown size={26} strokeWidth={1.8} aria-hidden="true" />
+        </a>
+      )}
     </div>
   );
 }
@@ -516,6 +535,7 @@ export function RequestPage({ locale }: { locale: Locale }) {
     <>
       <PageHeading
         background={pageBackgrounds.request}
+        scrollTarget="inquiry-form-section"
         locale={locale}
         eyebrow={uk ? "ПОЧНІМО СПІВПРАЦЮ" : "LET’S START A PARTNERSHIP"}
         title={
@@ -529,7 +549,7 @@ export function RequestPage({ locale }: { locale: Locale }) {
             : "Tell us about the material, application and expectations. If the details are still open, select consultation."
         }
       />
-      <section className="section request-layout">
+      <section className="section request-layout" id="inquiry-form-section">
         <aside>
           <span className="eyebrow">
             {uk ? "ЯК ЦЕ ПРАЦЮЄ" : "HOW IT WORKS"}

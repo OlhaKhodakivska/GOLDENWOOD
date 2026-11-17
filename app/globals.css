@@ -4485,3 +4485,47 @@ h3 {
     line-height: 1.6;
   }
 }
+
+/* A gentle directional cue links the inquiry cover to its form. */
+.page-heading-photo.page-heading-has-cue {
+  padding-bottom: 92px;
+}
+.page-scroll-cue {
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+  display: grid;
+  place-items: center;
+  width: 50px;
+  height: 50px;
+  border: 1px solid rgb(251 205 75 / 70%);
+  border-radius: 50%;
+  color: var(--sunflower);
+  background: rgb(20 38 12 / 85%);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 18px rgb(0 0 0 / 18%);
+}
+.page-scroll-cue:hover {
+  background: var(--forest);
+}
+.page-scroll-cue svg {
+  animation: scroll-cue-pulse 2.2s ease-in-out infinite;
+}
+@keyframes scroll-cue-pulse {
+  0%,
+  100% {
+    transform: translateY(-3px);
+    opacity: 0.65;
+  }
+  50% {
+    transform: translateY(4px);
+    opacity: 1;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .page-scroll-cue svg {
+    animation: none;
+  }
+}

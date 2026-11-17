@@ -1,0 +1,78 @@
+{
+  "checkedAt": "2026-11-17T15:02:21.213Z",
+  "checks": [
+    {
+      "animation": "scroll-cue-pulse",
+      "centerError": 0,
+      "height": 900,
+      "href": "#inquiry-form-section",
+      "inside": true,
+      "panelOverlap": false,
+      "path": "/uk/request",
+      "targetExists": true,
+      "width": 1440
+    },
+    {
+      "animation": "scroll-cue-pulse",
+      "centerError": 0,
+      "height": 900,
+      "href": "#inquiry-form-section",
+      "inside": true,
+      "panelOverlap": false,
+      "path": "/en/request",
+      "targetExists": true,
+      "width": 1440
+    },
+    {
+      "animation": "scroll-cue-pulse",
+      "centerError": 0,
+      "height": 600,
+      "href": "#inquiry-form-section",
+      "inside": true,
+      "panelOverlap": false,
+      "path": "/uk/request",
+      "targetExists": true,
+      "width": 1024
+    },
+    {
+      "animation": "scroll-cue-pulse",
+      "centerError": 0,
+      "height": 600,
+      "href": "#inquiry-form-section",
+      "inside": true,
+      "panelOverlap": false,
+      "path": "/en/request",
+      "targetExists": true,
+      "width": 1024
+    },
+    {
+      "animation": "scroll-cue-pulse",
+      "centerError": 0,
+      "height": 844,
+      "href": "#inquiry-form-section",
+      "inside": true,
+      "panelOverlap": false,
+      "path": "/uk/request",
+      "targetExists": true,
+      "width": 390
+    },
+    {
+      "animation": "scroll-cue-pulse",
+      "centerError": 0,
+      "height": 844,
+      "href": "#inquiry-form-section",
+      "inside": true,
+      "panelOverlap": false,
+      "path": "/en/request",
+      "targetExists": true,
+      "width": 390
+    }
+  ],
+  "navigation": {
+    "hash": "#inquiry-form-section",
+    "header": 81,
+    "targetTop": 110,
+    "y": 734
+  },
+  "passed": true
+}
