@@ -1,0 +1,711 @@
+{
+  "checkedAt": "2026-11-17T14:27:21.597Z",
+  "method": "Read-only checks of h1/h2/h3/p text-line intersections and horizontal document overflow. Each new browser tab explicitly sets and asserts its viewport. All 44 localized routes at 390x844 and 1440x900; background asset availability separately checked by HTTP integration tests.",
+  "checks": [
+    {
+      "height": 844,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/uk",
+      "textBlocks": 48,
+      "width": 390
+    },
+    {
+      "height": 844,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/uk/about",
+      "textBlocks": 8,
+      "width": 390
+    },
+    {
+      "height": 844,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/uk/hemp",
+      "textBlocks": 40,
+      "width": 390
+    },
+    {
+      "height": 844,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/uk/production",
+      "textBlocks": 26,
+      "width": 390
+    },
+    {
+      "height": 844,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/uk/products",
+      "textBlocks": 17,
+      "width": 390
+    },
+    {
+      "height": 844,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/uk/industries",
+      "textBlocks": 20,
+      "width": 390
+    },
+    {
+      "height": 844,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/uk/sustainability",
+      "textBlocks": 10,
+      "width": 390
+    },
+    {
+      "height": 844,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/uk/partners",
+      "textBlocks": 10,
+      "width": 390
+    },
+    {
+      "height": 844,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/uk/knowledge",
+      "textBlocks": 8,
+      "width": 390
+    },
+    {
+      "height": 844,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/uk/contacts",
+      "textBlocks": 9,
+      "width": 390
+    },
+    {
+      "height": 844,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/uk/request",
+      "textBlocks": 2,
+      "width": 390
+    },
+    {
+      "height": 844,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/uk/privacy",
+      "textBlocks": 12,
+      "width": 390
+    },
+    {
+      "height": 844,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/uk/terms",
+      "textBlocks": 10,
+      "width": 390
+    },
+    {
+      "height": 844,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/uk/products/decorticated-fiber",
+      "textBlocks": 19,
+      "width": 390
+    },
+    {
+      "height": 844,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/uk/products/short-fiber",
+      "textBlocks": 19,
+      "width": 390
+    },
+    {
+      "height": 844,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/uk/products/hemp-hurd",
+      "textBlocks": 19,
+      "width": 390
+    },
+    {
+      "height": 844,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/uk/products/milled-hurd",
+      "textBlocks": 19,
+      "width": 390
+    },
+    {
+      "height": 844,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/uk/products/retted-stalks",
+      "textBlocks": 19,
+      "width": 390
+    },
+    {
+      "height": 844,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/uk/products/hemp-seeds",
+      "textBlocks": 19,
+      "width": 390
+    },
+    {
+      "height": 844,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/uk/knowledge/fiber-and-hurd",
+      "textBlocks": 9,
+      "width": 390
+    },
+    {
+      "height": 844,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/uk/knowledge/prepare-an-inquiry",
+      "textBlocks": 9,
+      "width": 390
+    },
+    {
+      "height": 844,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/uk/knowledge/field-to-batch",
+      "textBlocks": 9,
+      "width": 390
+    },
+    {
+      "height": 844,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/en",
+      "textBlocks": 48,
+      "width": 390
+    },
+    {
+      "height": 844,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/en/about",
+      "textBlocks": 8,
+      "width": 390
+    },
+    {
+      "height": 844,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/en/hemp",
+      "textBlocks": 40,
+      "width": 390
+    },
+    {
+      "height": 844,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/en/production",
+      "textBlocks": 26,
+      "width": 390
+    },
+    {
+      "height": 844,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/en/products",
+      "textBlocks": 17,
+      "width": 390
+    },
+    {
+      "height": 844,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/en/industries",
+      "textBlocks": 20,
+      "width": 390
+    },
+    {
+      "height": 844,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/en/sustainability",
+      "textBlocks": 10,
+      "width": 390
+    },
+    {
+      "height": 844,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/en/partners",
+      "textBlocks": 10,
+      "width": 390
+    },
+    {
+      "height": 844,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/en/knowledge",
+      "textBlocks": 8,
+      "width": 390
+    },
+    {
+      "height": 844,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/en/contacts",
+      "textBlocks": 9,
+      "width": 390
+    },
+    {
+      "height": 844,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/en/request",
+      "textBlocks": 2,
+      "width": 390
+    },
+    {
+      "height": 844,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/en/privacy",
+      "textBlocks": 12,
+      "width": 390
+    },
+    {
+      "height": 844,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/en/terms",
+      "textBlocks": 10,
+      "width": 390
+    },
+    {
+      "height": 844,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/en/products/decorticated-fiber",
+      "textBlocks": 19,
+      "width": 390
+    },
+    {
+      "height": 844,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/en/products/short-fiber",
+      "textBlocks": 19,
+      "width": 390
+    },
+    {
+      "height": 844,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/en/products/hemp-hurd",
+      "textBlocks": 19,
+      "width": 390
+    },
+    {
+      "height": 844,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/en/products/milled-hurd",
+      "textBlocks": 19,
+      "width": 390
+    },
+    {
+      "height": 844,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/en/products/retted-stalks",
+      "textBlocks": 19,
+      "width": 390
+    },
+    {
+      "height": 844,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/en/products/hemp-seeds",
+      "textBlocks": 19,
+      "width": 390
+    },
+    {
+      "height": 844,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/en/knowledge/fiber-and-hurd",
+      "textBlocks": 9,
+      "width": 390
+    },
+    {
+      "height": 844,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/en/knowledge/prepare-an-inquiry",
+      "textBlocks": 9,
+      "width": 390
+    },
+    {
+      "height": 844,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/en/knowledge/field-to-batch",
+      "textBlocks": 9,
+      "width": 390
+    },
+    {
+      "height": 900,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/uk",
+      "textBlocks": 48,
+      "width": 1440
+    },
+    {
+      "height": 900,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/uk/about",
+      "textBlocks": 8,
+      "width": 1440
+    },
+    {
+      "height": 900,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/uk/hemp",
+      "textBlocks": 40,
+      "width": 1440
+    },
+    {
+      "height": 900,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/uk/production",
+      "textBlocks": 26,
+      "width": 1440
+    },
+    {
+      "height": 900,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/uk/products",
+      "textBlocks": 17,
+      "width": 1440
+    },
+    {
+      "height": 900,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/uk/industries",
+      "textBlocks": 20,
+      "width": 1440
+    },
+    {
+      "height": 900,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/uk/sustainability",
+      "textBlocks": 10,
+      "width": 1440
+    },
+    {
+      "height": 900,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/uk/partners",
+      "textBlocks": 10,
+      "width": 1440
+    },
+    {
+      "height": 900,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/uk/knowledge",
+      "textBlocks": 8,
+      "width": 1440
+    },
+    {
+      "height": 900,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/uk/contacts",
+      "textBlocks": 9,
+      "width": 1440
+    },
+    {
+      "height": 900,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/uk/request",
+      "textBlocks": 6,
+      "width": 1440
+    },
+    {
+      "height": 900,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/uk/privacy",
+      "textBlocks": 12,
+      "width": 1440
+    },
+    {
+      "height": 900,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/uk/terms",
+      "textBlocks": 10,
+      "width": 1440
+    },
+    {
+      "height": 900,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/uk/products/decorticated-fiber",
+      "textBlocks": 19,
+      "width": 1440
+    },
+    {
+      "height": 900,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/uk/products/short-fiber",
+      "textBlocks": 19,
+      "width": 1440
+    },
+    {
+      "height": 900,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/uk/products/hemp-hurd",
+      "textBlocks": 19,
+      "width": 1440
+    },
+    {
+      "height": 900,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/uk/products/milled-hurd",
+      "textBlocks": 19,
+      "width": 1440
+    },
+    {
+      "height": 900,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/uk/products/retted-stalks",
+      "textBlocks": 19,
+      "width": 1440
+    },
+    {
+      "height": 900,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/uk/products/hemp-seeds",
+      "textBlocks": 19,
+      "width": 1440
+    },
+    {
+      "height": 900,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/uk/knowledge/fiber-and-hurd",
+      "textBlocks": 9,
+      "width": 1440
+    },
+    {
+      "height": 900,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/uk/knowledge/prepare-an-inquiry",
+      "textBlocks": 9,
+      "width": 1440
+    },
+    {
+      "height": 900,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/uk/knowledge/field-to-batch",
+      "textBlocks": 9,
+      "width": 1440
+    },
+    {
+      "height": 900,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/en",
+      "textBlocks": 48,
+      "width": 1440
+    },
+    {
+      "height": 900,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/en/about",
+      "textBlocks": 8,
+      "width": 1440
+    },
+    {
+      "height": 900,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/en/hemp",
+      "textBlocks": 40,
+      "width": 1440
+    },
+    {
+      "height": 900,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/en/production",
+      "textBlocks": 26,
+      "width": 1440
+    },
+    {
+      "height": 900,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/en/products",
+      "textBlocks": 17,
+      "width": 1440
+    },
+    {
+      "height": 900,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/en/industries",
+      "textBlocks": 20,
+      "width": 1440
+    },
+    {
+      "height": 900,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/en/sustainability",
+      "textBlocks": 10,
+      "width": 1440
+    },
+    {
+      "height": 900,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/en/partners",
+      "textBlocks": 10,
+      "width": 1440
+    },
+    {
+      "height": 900,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/en/knowledge",
+      "textBlocks": 8,
+      "width": 1440
+    },
+    {
+      "height": 900,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/en/contacts",
+      "textBlocks": 9,
+      "width": 1440
+    },
+    {
+      "height": 900,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/en/request",
+      "textBlocks": 6,
+      "width": 1440
+    },
+    {
+      "height": 900,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/en/privacy",
+      "textBlocks": 12,
+      "width": 1440
+    },
+    {
+      "height": 900,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/en/terms",
+      "textBlocks": 10,
+      "width": 1440
+    },
+    {
+      "height": 900,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/en/products/decorticated-fiber",
+      "textBlocks": 19,
+      "width": 1440
+    },
+    {
+      "height": 900,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/en/products/short-fiber",
+      "textBlocks": 19,
+      "width": 1440
+    },
+    {
+      "height": 900,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/en/products/hemp-hurd",
+      "textBlocks": 19,
+      "width": 1440
+    },
+    {
+      "height": 900,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/en/products/milled-hurd",
+      "textBlocks": 19,
+      "width": 1440
+    },
+    {
+      "height": 900,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/en/products/retted-stalks",
+      "textBlocks": 19,
+      "width": 1440
+    },
+    {
+      "height": 900,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/en/products/hemp-seeds",
+      "textBlocks": 19,
+      "width": 1440
+    },
+    {
+      "height": 900,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/en/knowledge/fiber-and-hurd",
+      "textBlocks": 9,
+      "width": 1440
+    },
+    {
+      "height": 900,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/en/knowledge/prepare-an-inquiry",
+      "textBlocks": 9,
+      "width": 1440
+    },
+    {
+      "height": 900,
+      "horizontalOverflow": false,
+      "overlaps": [],
+      "path": "/en/knowledge/field-to-batch",
+      "textBlocks": 9,
+      "width": 1440
+    }
+  ],
+  "passed": true
+}

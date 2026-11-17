@@ -10,6 +10,7 @@ export default function HempPage({ locale }: { locale: Locale }) {
   return (
     <>
       <PageHeading
+        background="page-hemp"
         locale={locale}
         eyebrow={
           uk
@@ -31,7 +32,6 @@ export default function HempPage({ locale }: { locale: Locale }) {
               ? "Концептуальна композиція: шкарпетки, тканина, чохол, будівельний зразок, папір і насіння"
               : "Conceptual arrangement of socks, fabric, a phone case, building sample, paper and hemp seeds"
           }
-          priority
         />
       </div>
       <Reveal className="section hemp-introduction">

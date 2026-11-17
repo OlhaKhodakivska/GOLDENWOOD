@@ -4112,3 +4112,125 @@ h3 {
     font-size: clamp(32px, 3vw, 40px);
   }
 }
+
+/* Section-specific photographs, unobscured outside the frosted reading panel. */
+.page-heading-photo {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  color: var(--cream);
+  background: var(--forest);
+  min-height: var(--screen-section);
+  padding: 42px var(--page);
+  align-items: flex-start;
+}
+.page-heading-visual {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+.page-heading-visual .photo {
+  width: 100%;
+  height: 100%;
+}
+.page-heading-visual img {
+  object-position: center;
+}
+.page-heading-content {
+  width: min(960px, 100%);
+  padding: clamp(28px, 3vw, 44px);
+  background: rgb(var(--hero-glass-rgb) / var(--hero-glass-opacity));
+  -webkit-backdrop-filter: blur(16px) saturate(115%);
+  backdrop-filter: blur(16px) saturate(115%);
+  border: 1px solid rgb(247 248 238 / 20%);
+  box-shadow: 0 16px 48px rgb(0 0 0 / 12%);
+}
+.page-heading-photo .breadcrumbs {
+  color: var(--cream);
+  margin-bottom: 28px;
+}
+.page-heading-photo .crumb-separator {
+  opacity: 1;
+}
+.page-heading-photo .eyebrow {
+  color: var(--cream);
+}
+.page-heading-photo .eyebrow i {
+  background: var(--sunflower);
+}
+.page-heading-photo h1 {
+  font-size: clamp(36px, 3.8vw, 56px);
+  margin-top: 22px;
+  max-width: 24ch;
+}
+.page-heading-content > p {
+  font-size: 16px;
+  line-height: 1.85;
+  margin-top: 22px;
+  max-width: 65ch;
+}
+.product-detail-grid h2 {
+  font-size: clamp(28px, 3vw, 42px);
+  margin-block: 20px;
+}
+@media (max-width: 850px) {
+  .page-heading-content {
+    width: 100%;
+  }
+  .page-heading-photo h1 {
+    font-size: clamp(32px, 4.6vw, 44px);
+  }
+}
+@media (max-width: 600px) {
+  main > .page-heading-photo {
+    min-height: var(--screen-section);
+  }
+  .page-heading-photo {
+    padding: 28px var(--page);
+    align-items: center;
+  }
+  .page-heading-content {
+    padding: 26px 22px;
+    text-align: center;
+    background: rgb(var(--hero-glass-rgb) / var(--hero-glass-opacity-mobile));
+    -webkit-backdrop-filter: blur(20px) saturate(110%);
+    backdrop-filter: blur(20px) saturate(110%);
+  }
+  .page-heading-photo .breadcrumbs {
+    justify-content: center;
+    margin-bottom: 22px;
+    font-size: 10px;
+    gap: 7px;
+  }
+  .page-heading-photo .eyebrow {
+    justify-content: center;
+    font-size: 9px;
+  }
+  .page-heading-photo h1 {
+    font-size: clamp(28px, 7.5vw, 36px);
+    margin-top: 18px;
+    margin-inline: auto;
+  }
+  .page-heading-content > p {
+    font-size: 15px;
+    line-height: 1.7;
+    margin-top: 18px;
+  }
+}
+@media (min-width: 601px) and (max-height: 760px) {
+  .page-heading-photo {
+    padding-block: 26px;
+  }
+  .page-heading-content {
+    padding: 26px 32px;
+  }
+  .page-heading-photo h1 {
+    font-size: clamp(32px, 3vw, 44px);
+  }
+  .page-heading-content > p {
+    font-size: 15px;
+  }
+  .page-heading-photo .breadcrumbs {
+    margin-bottom: 20px;
+  }
+}

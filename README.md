@@ -31,7 +31,7 @@ Screenshots show the actual production build, rather than design mockups.
 
 ### Industrial applications
 
-![Industrial applications page with a forest-green introduction and yellow/lime cards](docs/screenshots/industries-desktop.png)
+![Industrial applications page with a thematic photo background and frosted reading panel](docs/screenshots/industries-desktop.png)
 
 ### Material catalog
 
@@ -170,7 +170,7 @@ TEST_BASE_URL=http://localhost:3001 npm run check:links
 TEST_BASE_URL=http://localhost:3001 CHECK_EXTERNAL=true npm run check:links
 ```
 
-The suite includes **12 unit/API tests and 10 HTTP integration scenarios**. Despite the script name `test:e2e`, these are HTTP integration tests, not automated browser interaction tests. The link crawler covers all 44 localized pages and validates internal destinations and fragment IDs. The contrast script checks 30 selected foreground/background pairs; it is not a full accessibility audit.
+The suite includes **12 unit/API tests and 11 HTTP integration scenarios**. Despite the script name `test:e2e`, these are HTTP integration tests, not automated browser interaction tests. The link crawler covers all 44 localized pages and validates internal destinations and fragment IDs. The contrast script checks 30 selected foreground/background pairs; it is not a full accessibility audit.
 
 Reports are written to `validation/`. See [VALIDATION.md](VALIDATION.md) for current scope and limitations.
 
@@ -187,8 +187,14 @@ The repository also retains an optional `build:sites` adapter for a separate Clo
 
 ## Assets and project scope
 
-The site includes **14 AI-generated conceptual images**, each optimized into six AVIF/WebP variants. Asset descriptions and generation provenance are recorded in `asset-manifest.json`. They illustrate a design concept and do not document operating factories, a vehicle fleet, or commercial production.
+The site includes **24 AI-generated conceptual images**, each optimized into six AVIF/WebP variants. Asset descriptions and generation provenance are recorded in `asset-manifest.json`. They illustrate a design concept and do not document operating factories, a vehicle fleet, or commercial production.
 
 The original GoldenWood logo is retained in `public/GoldenWood-original-transparent.svg`. The header version adjusts its view box; the favicon reuses the forest symbol with a contrasting backing.
 
 Forest-support links lead to independent organizations' official websites. The project does not collect donations or claim a partnership. Legal pages and business contact details are demonstration content and require review before any commercial launch.
+
+### Internal page photography
+
+Ten additional landscape photographs form a coherent industrial-hemp background series. Section assignments live in `content/page-backgrounds.ts`: farmland for the holding, a processing workshop for production, fiber/hurd/seeds for materials, manufacturing applications, botanical detail, field/forest sustainability, grower fields, a material study for knowledge, a farm approach for contacts, and a dispatch setting for inquiries. Product details reuse the materials background; article details reuse knowledge; legal headings reuse contacts. The existing product and editorial photos remain in the content below.
+
+All page headers use responsive AVIF/WebP sources, decorative empty alt text, one H1, and the same accessible glass-panel contrast model as the homepage. Backgrounds load at high priority; photos below the first screen load lazily. Exact prompts and original paths are recorded in `asset-manifest.json`; originals are saved as `assets/originals/page-*-original.png`. Generation used the built-in Imagegen tool.

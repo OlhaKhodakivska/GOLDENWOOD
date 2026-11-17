@@ -1,6 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { products, articles } from "../content/repository";
+import { pageBackgrounds } from "../content/page-backgrounds";
 const base = process.env.TEST_BASE_URL || "http://localhost:3000";
 const routePaths = [
   "",
@@ -78,7 +79,17 @@ test("all optimized image files referenced by manifest exist and load", async ()
   const manifest = JSON.parse(
     await fs.readFile("asset-manifest.json", "utf8"),
   ) as { assets: { name: string; files: string[] }[] };
-  assert.equal(manifest.assets.length, 14);
+  assert.ok(manifest.assets.length > 0);
+  assert.equal(
+    new Set(manifest.assets.map((asset) => asset.name)).size,
+    manifest.assets.length,
+  );
+  for (const name of new Set(Object.values(pageBackgrounds))) {
+    assert.ok(
+      manifest.assets.some((asset) => asset.name === name),
+      `${name} is recorded in the manifest`,
+    );
+  }
   for (const a of manifest.assets) {
     assert.equal(a.files.length, 6);
     for (const file of a.files) {
@@ -224,5 +235,34 @@ test("production captions precede images and actions contain no decorative arrow
         "https://www.rainforesttrust.org/get-involved/ways-to-give/",
       ),
     );
+  }
+});
+
+test("all localized internal pages expose a decorative thematic background and one H1", async () => {
+  for (const locale of ["uk", "en"]) {
+    for (const path of routePaths.filter(Boolean)) {
+      const section = path.split("/")[1] as keyof typeof pageBackgrounds;
+      const expected = pageBackgrounds[section];
+      assert.ok(expected, `${path} has a section background`);
+      const html = await (await fetch(`${base}/${locale}${path}`)).text();
+      const visual = html.match(
+        /<div class="page-heading-visual" aria-hidden="true">([\s\S]*?)<\/div>/,
+      )?.[1];
+      assert.ok(visual, `${locale}${path} decorative background container`);
+      assert.ok(
+        visual.includes(`/images/${expected}-1280.webp`),
+        `${locale}${path} background`,
+      );
+      assert.ok(visual.includes('alt=""'), `${locale}${path} decorative image`);
+      assert.ok(
+        visual.includes('sizes="100vw"'),
+        `${locale}${path} responsive full-width image`,
+      );
+      assert.equal(
+        (html.match(/<h1(?:\s|>)/g) || []).length,
+        1,
+        `${locale}${path} H1`,
+      );
+    }
   }
 });

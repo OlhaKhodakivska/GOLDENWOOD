@@ -5,24 +5,26 @@ export function Photo({
   alt,
   className = "",
   priority = false,
+  sizes = "(max-width: 700px) 100vw, 70vw",
 }: {
   name: string;
   alt: string;
   className?: string;
   priority?: boolean;
+  sizes?: string;
 }) {
   return (
     <picture className={`photo ${className}`}>
       <source
         type="image/avif"
         srcSet={`/images/${name}-640.avif 640w, /images/${name}-1280.avif 1280w, /images/${name}-1536.avif 1536w`}
-        sizes="(max-width: 700px) 100vw, 70vw"
+        sizes={sizes}
       />
       <img
         src={`/images/${name}-1280.webp`}
         alt={alt}
         width={1536}
-        height={name === "hero" ? 864 : 1024}
+        height={name === "hero" || name.startsWith("page-") ? 864 : 1024}
         loading={priority ? "eager" : "lazy"}
         fetchPriority={priority ? "high" : "auto"}
       />

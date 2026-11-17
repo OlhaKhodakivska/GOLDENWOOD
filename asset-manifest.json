@@ -212,6 +212,156 @@
         "/images/trucks-1536.webp"
       ],
       "brand_reference": "public/logo-header.svg"
+    },
+    {
+      "name": "page-about",
+      "prompt": "Use case: photorealistic-natural. Asset type: full-bleed 16:9 landscape background photograph for GoldenWood, a premium Ukrainian industrial-hemp B2B materials website. Natural forest-green, grass-green, warm sunlight and pale natural fibers, realistic documentary detail, sophisticated quiet composition. Actual photograph, no text, no lettering, no logos, no watermarks, no graphical borders, no collage. Bright clear natural light, NO haze, NO fog, NO added dark gradient or color overlay. Industrial tall narrow stalk hemp grown for fiber and seed, not recreational cannabis buds, no smoking. Important subjects on the right half, left half calm organic visual texture for a translucent text panel. Keep composition attractive when centrally cropped on a phone. Sweeping gently rolling hemp farmland with orderly rows, a modest modern agricultural processing building far in the distance, tree line, late-afternoon sunshine, a confident landscape of land connected to manufacturing.",
+      "purpose": "Decorative full-bleed internal page background",
+      "generated": true,
+      "original": "assets/originals/page-about-original.png",
+      "files": [
+        "/images/page-about-640.avif",
+        "/images/page-about-640.webp",
+        "/images/page-about-1280.avif",
+        "/images/page-about-1280.webp",
+        "/images/page-about-1536.avif",
+        "/images/page-about-1536.webp"
+      ]
+    },
+    {
+      "name": "page-production",
+      "prompt": "Use case: photorealistic-natural. Asset type: full-bleed 16:9 landscape background photograph for GoldenWood, a premium Ukrainian industrial-hemp B2B materials website. Natural forest-green, grass-green, warm sunlight and pale natural fibers, realistic documentary detail, sophisticated quiet composition. Actual photograph, no text, no lettering, no logos, no watermarks, no graphical borders, no collage. Bright clear natural light, NO haze, NO fog, NO added dark gradient or color overlay. Industrial tall narrow stalk hemp grown for fiber and seed, not recreational cannabis buds, no smoking. Important subjects on the right half, left half calm organic visual texture for a translucent text panel. Keep composition attractive when centrally cropped on a phone. Clean close documentary view inside a modern agricultural primary-processing workshop: natural hemp stalks on an orderly mechanical conveyor, finished loose bast fiber visible on the right, brushed metal machinery, large windows with daylight and a glimpse of hemp fields. Believable safe machinery, no people.",
+      "purpose": "Decorative full-bleed internal page background",
+      "generated": true,
+      "original": "assets/originals/page-production-original.png",
+      "files": [
+        "/images/page-production-640.avif",
+        "/images/page-production-640.webp",
+        "/images/page-production-1280.avif",
+        "/images/page-production-1280.webp",
+        "/images/page-production-1536.avif",
+        "/images/page-production-1536.webp"
+      ]
+    },
+    {
+      "name": "page-materials",
+      "prompt": "Use case: photorealistic-natural. Asset type: full-bleed 16:9 landscape background photograph for GoldenWood, a premium Ukrainian industrial-hemp B2B materials website. Natural forest-green, grass-green, warm sunlight and pale natural fibers, realistic documentary detail, sophisticated quiet composition. Actual photograph, no text, no lettering, no logos, no watermarks, no graphical borders, no collage. Bright clear natural light, NO haze, NO fog, NO added dark gradient or color overlay. Industrial tall narrow stalk hemp grown for fiber and seed, not recreational cannabis buds, no smoking. Important subjects on the right half, left half calm organic visual texture for a translucent text panel. Keep composition attractive when centrally cropped on a phone. Refined tactile still life of long pale hemp bast fibers, clean woody hemp hurd chips and a small generous mound of whole mottled hemp seeds on a warm cream industrial workbench. Fresh industrial hemp stems softly out of focus on the right. Rich material detail, daylight, landscape editorial photography.",
+      "purpose": "Decorative full-bleed internal page background",
+      "generated": true,
+      "original": "assets/originals/page-materials-original.png",
+      "files": [
+        "/images/page-materials-640.avif",
+        "/images/page-materials-640.webp",
+        "/images/page-materials-1280.avif",
+        "/images/page-materials-1280.webp",
+        "/images/page-materials-1536.avif",
+        "/images/page-materials-1536.webp"
+      ]
+    },
+    {
+      "name": "page-industries",
+      "prompt": "Use case: photorealistic-natural. Asset type: full-bleed 16:9 landscape background photograph for GoldenWood, a premium Ukrainian industrial-hemp B2B materials website. Natural forest-green, grass-green, warm sunlight and pale natural fibers, realistic documentary detail, sophisticated quiet composition. Actual photograph, no text, no lettering, no logos, no watermarks, no graphical borders, no collage. Bright clear natural light, NO haze, NO fog, NO added dark gradient or color overlay. Industrial tall narrow stalk hemp grown for fiber and seed, not recreational cannabis buds, no smoking. Important subjects on the right half, left half calm organic visual texture for a translucent text panel. Keep composition attractive when centrally cropped on a phone. Architectural material study photographed in a light-filled modern workspace: hemp-lime building block with clearly visible woody shiv, natural fiber composite panel, rolled pale hemp textile and industrial hemp stalks, all arranged in the right half, living hemp field outside tall windows. Realistic premium manufacturing mood.",
+      "purpose": "Decorative full-bleed internal page background",
+      "generated": true,
+      "original": "assets/originals/page-industries-original.png",
+      "files": [
+        "/images/page-industries-640.avif",
+        "/images/page-industries-640.webp",
+        "/images/page-industries-1280.avif",
+        "/images/page-industries-1280.webp",
+        "/images/page-industries-1536.avif",
+        "/images/page-industries-1536.webp"
+      ]
+    },
+    {
+      "name": "page-hemp",
+      "prompt": "Use case: photorealistic-natural. Asset type: full-bleed 16:9 landscape background photograph for GoldenWood, a premium Ukrainian industrial-hemp B2B materials website. Natural forest-green, grass-green, warm sunlight and pale natural fibers, realistic documentary detail, sophisticated quiet composition. Actual photograph, no text, no lettering, no logos, no watermarks, no graphical borders, no collage. Bright clear natural light, NO haze, NO fog, NO added dark gradient or color overlay. Industrial tall narrow stalk hemp grown for fiber and seed, not recreational cannabis buds, no smoking. Important subjects on the right half, left half calm organic visual texture for a translucent text panel. Keep composition attractive when centrally cropped on a phone. Beautiful sunlit close botanical photograph of slender industrial hemp leaves and tall fibrous stems, an elegant branching silhouette on the right with delicate new growth, natural field rows and a soft tree line behind, warm early-summer light, botanical documentary quality.",
+      "purpose": "Decorative full-bleed internal page background",
+      "generated": true,
+      "original": "assets/originals/page-hemp-original.png",
+      "files": [
+        "/images/page-hemp-640.avif",
+        "/images/page-hemp-640.webp",
+        "/images/page-hemp-1280.avif",
+        "/images/page-hemp-1280.webp",
+        "/images/page-hemp-1536.avif",
+        "/images/page-hemp-1536.webp"
+      ]
+    },
+    {
+      "name": "page-sustainability",
+      "prompt": "Use case: photorealistic-natural. Asset type: full-bleed 16:9 landscape background photograph for GoldenWood, a premium Ukrainian industrial-hemp B2B materials website. Natural forest-green, grass-green, warm sunlight and pale natural fibers, realistic documentary detail, sophisticated quiet composition. Actual photograph, no text, no lettering, no logos, no watermarks, no graphical borders, no collage. Bright clear natural light, NO haze, NO fog, NO added dark gradient or color overlay. Industrial tall narrow stalk hemp grown for fiber and seed, not recreational cannabis buds, no smoking. Important subjects on the right half, left half calm organic visual texture for a translucent text panel. Keep composition attractive when centrally cropped on a phone. Healthy industrial hemp crop on the edge of a mature mixed forest, lush soil-level understory and a visible forest tree line, a quiet fertile agricultural landscape photographed in clear early morning sunshine, clean green foliage and naturally warm highlights.",
+      "purpose": "Decorative full-bleed internal page background",
+      "generated": true,
+      "original": "assets/originals/page-sustainability-original.png",
+      "files": [
+        "/images/page-sustainability-640.avif",
+        "/images/page-sustainability-640.webp",
+        "/images/page-sustainability-1280.avif",
+        "/images/page-sustainability-1280.webp",
+        "/images/page-sustainability-1536.avif",
+        "/images/page-sustainability-1536.webp"
+      ]
+    },
+    {
+      "name": "page-partners",
+      "prompt": "Use case: photorealistic-natural. Asset type: full-bleed 16:9 landscape background photograph for GoldenWood, a premium Ukrainian industrial-hemp B2B materials website. Natural forest-green, grass-green, warm sunlight and pale natural fibers, realistic documentary detail, sophisticated quiet composition. Actual photograph, no text, no lettering, no logos, no watermarks, no graphical borders, no collage. Bright clear natural light, NO haze, NO fog, NO added dark gradient or color overlay. Industrial tall narrow stalk hemp grown for fiber and seed, not recreational cannabis buds, no smoking. Important subjects on the right half, left half calm organic visual texture for a translucent text panel. Keep composition attractive when centrally cropped on a phone. Agricultural view down long straight rows of tall industrial hemp, one small tractor far away toward the right-hand horizon, carefully maintained field margins and a narrow farm track, warm afternoon light, approachable realistic rural business setting. No foreground people.",
+      "purpose": "Decorative full-bleed internal page background",
+      "generated": true,
+      "original": "assets/originals/page-partners-original.png",
+      "files": [
+        "/images/page-partners-640.avif",
+        "/images/page-partners-640.webp",
+        "/images/page-partners-1280.avif",
+        "/images/page-partners-1280.webp",
+        "/images/page-partners-1536.avif",
+        "/images/page-partners-1536.webp"
+      ]
+    },
+    {
+      "name": "page-knowledge",
+      "prompt": "Use case: photorealistic-natural. Asset type: full-bleed 16:9 landscape background photograph for GoldenWood, a premium Ukrainian industrial-hemp B2B materials website. Natural forest-green, grass-green, warm sunlight and pale natural fibers, realistic documentary detail, sophisticated quiet composition. Actual photograph, no text, no lettering, no logos, no watermarks, no graphical borders, no collage. Bright clear natural light, NO haze, NO fog, NO added dark gradient or color overlay. Industrial tall narrow stalk hemp grown for fiber and seed, not recreational cannabis buds, no smoking. Important subjects on the right half, left half calm organic visual texture for a translucent text panel. Keep composition attractive when centrally cropped on a phone. Close documentary study of a hemp stem cross-section, pale bast fibers and a delicate hemp leaf on an agronomist's plain cream worktable, a blank notebook without marks and a small magnifying glass on the right, open window overlooking a sunlit hemp field. No visible writing or labels.",
+      "purpose": "Decorative full-bleed internal page background",
+      "generated": true,
+      "original": "assets/originals/page-knowledge-original.png",
+      "files": [
+        "/images/page-knowledge-640.avif",
+        "/images/page-knowledge-640.webp",
+        "/images/page-knowledge-1280.avif",
+        "/images/page-knowledge-1280.webp",
+        "/images/page-knowledge-1536.avif",
+        "/images/page-knowledge-1536.webp"
+      ]
+    },
+    {
+      "name": "page-contacts",
+      "prompt": "Use case: photorealistic-natural. Asset type: full-bleed 16:9 landscape background photograph for GoldenWood, a premium Ukrainian industrial-hemp B2B materials website. Natural forest-green, grass-green, warm sunlight and pale natural fibers, realistic documentary detail, sophisticated quiet composition. Actual photograph, no text, no lettering, no logos, no watermarks, no graphical borders, no collage. Bright clear natural light, NO haze, NO fog, NO added dark gradient or color overlay. Industrial tall narrow stalk hemp grown for fiber and seed, not recreational cannabis buds, no smoking. Important subjects on the right half, left half calm organic visual texture for a translucent text panel. Keep composition attractive when centrally cropped on a phone. Inviting broad landscape of a narrow rural lane leading through industrial hemp fields toward a modest agricultural warehouse on the right in the distance, trees, open clear sky, warm welcoming late-afternoon sunlight, quiet professional supply-chain setting.",
+      "purpose": "Decorative full-bleed internal page background",
+      "generated": true,
+      "original": "assets/originals/page-contacts-original.png",
+      "files": [
+        "/images/page-contacts-640.avif",
+        "/images/page-contacts-640.webp",
+        "/images/page-contacts-1280.avif",
+        "/images/page-contacts-1280.webp",
+        "/images/page-contacts-1536.avif",
+        "/images/page-contacts-1536.webp"
+      ]
+    },
+    {
+      "name": "page-request",
+      "prompt": "Use case: photorealistic-natural. Asset type: full-bleed 16:9 landscape background photograph for GoldenWood, a premium Ukrainian industrial-hemp B2B materials website. Natural forest-green, grass-green, warm sunlight and pale natural fibers, realistic documentary detail, sophisticated quiet composition. Actual photograph, no text, no lettering, no logos, no watermarks, no graphical borders, no collage. Bright clear natural light, NO haze, NO fog, NO added dark gradient or color overlay. Industrial tall narrow stalk hemp grown for fiber and seed, not recreational cannabis buds, no smoking. Important subjects on the right half, left half calm organic visual texture for a translucent text panel. Keep composition attractive when centrally cropped on a phone. Sunlit dispatch preparation scene at a neat agricultural warehouse: sealed unmarked natural fiber sacks, an open sample tray of hemp hurd and pale bast fiber on a clean wooden table at the right, industrial hemp fields visible through a wide doorway, no text or labels, clear natural textures.",
+      "purpose": "Decorative full-bleed internal page background",
+      "generated": true,
+      "original": "assets/originals/page-request-original.png",
+      "files": [
+        "/images/page-request-640.avif",
+        "/images/page-request-640.webp",
+        "/images/page-request-1280.avif",
+        "/images/page-request-1280.webp",
+        "/images/page-request-1536.avif",
+        "/images/page-request-1536.webp"
+      ]
     }
   ]
 }

@@ -20,30 +20,46 @@ import {
 } from "./ui";
 import { ProductFilters, FAQAccordion } from "./Interactive";
 import InquiryForm from "./InquiryForm";
+import {
+  pageBackgrounds,
+  type PageBackground,
+} from "@/content/page-backgrounds";
 export function PageHeading({
   locale,
   title,
   intro,
   eyebrow,
   className = "",
+  background = "page-about",
+  breadcrumbs,
 }: {
   locale: Locale;
   title: string;
   intro?: string;
   eyebrow?: string;
   className?: string;
+  background?: PageBackground;
+  breadcrumbs?: { label: string; href?: string }[];
 }) {
   return (
-    <div className={`page-heading ${className}`}>
-      <Breadcrumbs locale={locale} items={[{ label: eyebrow || title }]} />
-      {eyebrow && (
-        <span className="eyebrow">
-          <i />
-          {eyebrow}
-        </span>
-      )}
-      <h1>{title}</h1>
-      {intro && <p>{intro}</p>}
+    <div className={`page-heading page-heading-photo ${className}`}>
+      <div className="page-heading-visual" aria-hidden="true">
+        <Photo name={background} alt="" priority sizes="100vw" />
+      </div>
+      <div className="page-heading-content">
+        <Breadcrumbs
+          locale={locale}
+          items={breadcrumbs || [{ label: eyebrow || title }]}
+        />
+        {eyebrow && (
+          <span className="eyebrow">
+            <i />
+            {eyebrow}
+          </span>
+        )}
+        <h1>{title}</h1>
+        {intro && <p>{intro}</p>}
+      </div>
     </div>
   );
 }
@@ -52,6 +68,7 @@ export function Catalog({ locale }: { locale: Locale }) {
   return (
     <>
       <PageHeading
+        background={pageBackgrounds.products}
         locale={locale}
         eyebrow={uk ? "КАТАЛОГ СИРОВИНИ" : "MATERIAL CATALOG"}
         title={
@@ -77,24 +94,25 @@ export function Material({ locale, slug }: { locale: Locale; slug: string }) {
   const uk = locale === "uk";
   return (
     <>
+      <PageHeading
+        locale={locale}
+        background={pageBackgrounds.products}
+        eyebrow={uk ? "МАТЕРІАЛИ GOLDENWOOD" : "GOLDENWOOD MATERIALS"}
+        title={p.name[locale]}
+        intro={p.description[locale]}
+        breadcrumbs={[
+          { label: uk ? "Сировина" : "Materials", href: `/${locale}/products` },
+          { label: p.name[locale] },
+        ]}
+      />
       <div className="section product-detail">
-        <Breadcrumbs
-          locale={locale}
-          items={[
-            {
-              label: uk ? "Сировина" : "Materials",
-              href: `/${locale}/products`,
-            },
-            { label: p.name[locale] },
-          ]}
-        />
         <div className="product-detail-grid">
-          <Photo name={p.image} alt={p.name[locale]} priority />
+          <Photo name={p.image} alt={p.name[locale]} />
           <div>
             <span className="eyebrow">
               {uk ? "МАТЕРІАЛИ GOLDENWOOD" : "GOLDENWOOD MATERIALS"}
             </span>
-            <h1>{p.name[locale]}</h1>
+            <h2>{p.name[locale]}</h2>
             <p>{p.description[locale]}</p>
             <div className="tag-list">
               {p.applications.map((a) => (
@@ -197,6 +215,9 @@ export function Corporate({ locale, slug }: { locale: Locale; slug: string }) {
   return (
     <>
       <PageHeading
+        background={
+          pageBackgrounds[slug as "about" | "partners" | "sustainability"]
+        }
         locale={locale}
         title={p.title[locale]}
         intro={p.intro[locale]}
@@ -215,7 +236,7 @@ export function Corporate({ locale, slug }: { locale: Locale; slug: string }) {
         }
       />
       <div className="wide-photo">
-        <Photo name={p.image} alt={p.title[locale]} priority />
+        <Photo name={p.image} alt={p.title[locale]} />
       </div>
       <div className="section editorial-sections">
         {p.sections.map((s, i) => (
@@ -252,6 +273,7 @@ export function Production({ locale }: { locale: Locale }) {
   return (
     <>
       <PageHeading
+        background={pageBackgrounds.production}
         locale={locale}
         eyebrow={uk ? "ВИРОЩУВАННЯ ТА ПЕРЕРОБКА" : "CULTIVATION & PROCESSING"}
         title={
@@ -309,6 +331,7 @@ export function Industries({ locale }: { locale: Locale }) {
   return (
     <>
       <PageHeading
+        background={pageBackgrounds.industries}
         className="industries-heading"
         locale={locale}
         eyebrow={uk ? "ГАЛУЗІ ЗАСТОСУВАННЯ" : "INDUSTRIAL APPLICATIONS"}
@@ -346,6 +369,7 @@ export function Knowledge({ locale }: { locale: Locale }) {
   return (
     <>
       <PageHeading
+        background={pageBackgrounds.knowledge}
         locale={locale}
         eyebrow={uk ? "ЦЕНТР ЗНАНЬ" : "KNOWLEDGE CENTER"}
         title={
@@ -393,22 +417,21 @@ export function Article({ locale, slug }: { locale: Locale; slug: string }) {
   const uk = locale === "uk";
   return (
     <>
+      <PageHeading
+        locale={locale}
+        background={pageBackgrounds.knowledge}
+        eyebrow={`${a.tag[locale]} · ${uk ? "5 хв читання" : "5 min read"}`}
+        title={a.title[locale]}
+        breadcrumbs={[
+          {
+            label: uk ? "Центр знань" : "Knowledge center",
+            href: `/${locale}/knowledge`,
+          },
+          { label: a.title[locale] },
+        ]}
+      />
       <article className="article-detail">
-        <Breadcrumbs
-          locale={locale}
-          items={[
-            {
-              label: uk ? "Центр знань" : "Knowledge center",
-              href: `/${locale}/knowledge`,
-            },
-            { label: a.title[locale] },
-          ]}
-        />
-        <span className="eyebrow">
-          {a.tag[locale]} · {uk ? "5 хв читання" : "5 min read"}
-        </span>
-        <h1>{a.title[locale]}</h1>
-        <Photo name={a.image} alt={a.title[locale]} priority />
+        <Photo name={a.image} alt={a.title[locale]} />
         <div className="article-prose">
           {a.sections.map((s, i) => (
             <section key={i}>
@@ -443,6 +466,7 @@ export function RequestPage({ locale }: { locale: Locale }) {
   return (
     <>
       <PageHeading
+        background={pageBackgrounds.request}
         locale={locale}
         eyebrow={uk ? "ПОЧНІМО СПІВПРАЦЮ" : "LET’S START A PARTNERSHIP"}
         title={
@@ -493,6 +517,7 @@ export function Contacts({ locale }: { locale: Locale }) {
   return (
     <>
       <PageHeading
+        background={pageBackgrounds.contacts}
         locale={locale}
         eyebrow={uk ? "КОНТАКТИ" : "CONTACTS"}
         title={
@@ -584,6 +609,7 @@ export function Legal({
   return (
     <>
       <PageHeading
+        background={pageBackgrounds.contacts}
         locale={locale}
         eyebrow={uk ? "ПРОЄКТ ДОКУМЕНТА" : "DOCUMENT DRAFT"}
         title={

@@ -12,7 +12,7 @@ This report distinguishes automated HTTP checks from browser interaction checks.
 | `npm run typecheck`      | Passed    | Strict TypeScript checking                                                                                 |
 | `npm run lint`           | Passed    | ESLint, React Hooks, Next.js, and JSX accessibility rules                                                  |
 | `npm test`               | 12 passed | Shared validation, API request limits, origin/content checks, demo mode, and mocked live-delivery outcomes |
-| `npm run test:e2e`       | 10 passed | HTTP integration scenarios against the production server                                                   |
+| `npm run test:e2e`       | 11 passed | HTTP integration scenarios against the production server                                                   |
 | `npm run check:links`    | Passed    | 44 pages, 152 distinct links, 86 internal targets, 64 fragment checks                                      |
 | `npm run check:contrast` | 30 passed | Selected semantic foreground/background pairs                                                              |
 
@@ -52,7 +52,7 @@ The earlier responsive run completed 32 of 36 planned geometry checks before a b
 
 ## Asset checks
 
-- 14 original conceptual images; 84 AVIF/WebP variants.
+- 24 original conceptual images; 144 AVIF/WebP variants.
 - 12 self-hosted Manrope font files.
 - Ukrainian and US flag assets return HTTP 200.
 - SVG, PNG, and ICO favicon assets return HTTP 200; the mark was visually inspected at 180 px and 32 px.
@@ -76,8 +76,18 @@ Hero panels now use localized backdrop blur with opacity 0.86 on desktop and 0.7
 
 Desktop primary sections use the visible viewport minus the sticky header as their minimum height. Long content remains free to grow; no fixed-height clipping or forced scroll snapping is introduced. Mobile content sections use natural height with smaller spacing. Short desktop screens have separate hero typography rules.
 
-Browser geometry checks: **119 completed, no detected text-line collisions or horizontal document overflow**. This includes all 44 localized routes at 1440×900 and 390×844, six editorial routes at 1192×800, 14 key routes at 360×640, additional hero sizing checks, and the discovery panels checked open. Closed native disclosure content is excluded from collision detection. These automatic geometry checks do not replace visual inspection of every element.
+Browser geometry checks: **119 completed, no detected text-line collisions or horizontal document overflow**. The historical run used the actual viewport dimensions recorded per result: 390×844: 13 checks, 1280×720: 66 checks, 1440×900: 12 checks, 1192×800: 6 checks, 360×640: 16 checks, 1440×700: 2 checks, 1440×600: 2 checks, 1024×768: 1 checks, 390×1000: 1 checks. A later full-route run explicitly asserts both target viewport sizes, as described below. Closed native disclosure content is excluded from collision detection. These automatic geometry checks do not replace visual inspection of every element.
 
 Hero height matches the viewport minus the header at 1440×900, 1440×700, 1440×600, 1024×768, 390×844 and 360×640 in the checked Ukrainian cases; English is additionally checked at both short desktop heights and both mobile sizes. Screenshot inspection covers desktop/mobile hero and the repaired editorial rows. No JavaScript console errors were returned in the final page check.
 
 Production build, TypeScript, lint, 10 HTTP integration scenarios and the 44-page internal-link crawl pass. Browser results: [layout-checks.json](validation/layout-checks.json). Visual evidence: [desktop glass](validation/screenshots/hero-desktop.png), [mobile glass](validation/screenshots/hero-mobile.png), [editorial columns](validation/screenshots/editorial-desktop.png). Homepage portfolio screenshots have been refreshed.
+
+## Thematic internal page backgrounds
+
+Ten separately generated images are saved in assets/originals/page-*-original.png. Each has AVIF and WebP files at widths 640, 1280 and 1536 px, bringing the image manifest to 24 originals and 144 optimized files. Original subjects and composition were inspected. Exact prompts are preserved in asset-manifest.json. Page-background assignment is shared by both locales.
+
+All internal headings, including product details, article details, request and legal pages, now use a decorative photographic background plus the shared glass reading panel. Product/article-specific photographs remain below the header and load lazily. Background sources use sizes=100vw and high fetch priority. Each route retains exactly one H1 and its breadcrumb structure.
+
+Production build, lint, TypeScript and **11 HTTP integration scenarios** pass. The additional scenario verifies the expected thematic background, decorative alt text, full-width responsive source and single H1 on all internal localized routes. All 144 optimized image files return HTTP 200; the internal-link crawl still covers 44 pages without failures. All 30 semantic contrast checks pass.
+
+Final browser geometry run explicitly sets and asserts each new tab's viewport: **44 routes at 390×844 and the same 44 routes at 1440×900**. No visible heading/paragraph line collisions or horizontal document overflow were detected. Closed native disclosure content is excluded. Report: [page-background-checks.json](validation/page-background-checks.json). This is a geometry check, not a full accessibility audit. Visual spot checks cover the holding background on desktop/mobile and the applications header; background originals were also inspected.
