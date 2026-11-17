@@ -1,10 +1,10 @@
 {
-  "checkedAt": "2026-11-17T15:02:07.115Z",
+  "checkedAt": "2026-11-17T15:08:22.522Z",
   "base": "http://localhost:3001",
   "pages": 44,
-  "uniqueLinks": 154,
+  "uniqueLinks": 194,
   "internalTargets": 86,
-  "anchorsChecked": 66,
+  "anchorsChecked": 106,
   "external": [],
   "failures": []
 }

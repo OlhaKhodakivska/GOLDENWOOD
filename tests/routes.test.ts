@@ -254,6 +254,24 @@ test("all localized internal pages expose a decorative thematic background and o
         `${locale}${path} background`,
       );
       assert.ok(visual.includes('alt=""'), `${locale}${path} decorative image`);
+      const target =
+        path === "/request" ? "inquiry-form-section" : "page-content";
+      assert.ok(
+        html.includes(`href="#${target}"`),
+        `${locale}${path} scroll cue destination`,
+      );
+      assert.ok(
+        html.includes(`id="${target}"`),
+        `${locale}${path} scroll cue anchor`,
+      );
+      assert.ok(
+        html.includes("scroll-cue-mouse"),
+        `${locale}${path} desktop hint`,
+      );
+      assert.ok(
+        html.includes("scroll-cue-chevron"),
+        `${locale}${path} mobile hint`,
+      );
       assert.ok(
         visual.includes('sizes="100vw"'),
         `${locale}${path} responsive full-width image`,

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import LogisticsSection from "./LogisticsSection";
+import ScrollCue from "./ScrollCue";
 import { HeroVisual } from "./HomeNavigation";
 import {
   Layers,
@@ -65,12 +66,11 @@ export default function Home({ locale }: { locale: Locale }) {
         </div>
         <div className="hero-bottom">
           <span>UKRAINIAN ROOTS. INDUSTRIAL VISION.</span>
-          <a
-            href="#introduction"
-            aria-label={uk ? "Далі про холдинг" : "Learn about the holding"}
-          >
-            <span>{uk ? "ДОСЛІДЖУЙТЕ GOLDENWOOD" : "EXPLORE GOLDENWOOD"}</span>
-          </a>
+          <ScrollCue
+            locale={locale}
+            target="introduction"
+            label={uk ? "Далі про холдинг" : "Learn about the holding"}
+          />
         </div>
       </section>
       <div className="introduction-screen" id="introduction">

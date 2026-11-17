@@ -20,7 +20,7 @@ import {
 } from "./ui";
 import { ProductFilters, FAQAccordion } from "./Interactive";
 import InquiryForm from "./InquiryForm";
-import { ArrowDown } from "./icons";
+import ScrollCue from "./ScrollCue";
 import {
   pageBackgrounds,
   type PageBackground,
@@ -33,7 +33,7 @@ export function PageHeading({
   className = "",
   background = "page-about",
   breadcrumbs,
-  scrollTarget,
+  scrollTarget = "page-content",
 }: {
   locale: Locale;
   title: string;
@@ -45,41 +45,47 @@ export function PageHeading({
   scrollTarget?: string;
 }) {
   return (
-    <div
-      className={`page-heading page-heading-photo ${scrollTarget ? "page-heading-has-cue" : ""} ${className}`}
-    >
-      <div className="page-heading-visual" aria-hidden="true">
-        <Photo name={background} alt="" priority sizes="100vw" />
-      </div>
-      <div className="page-heading-content">
-        <Breadcrumbs
+    <>
+      <div
+        className={`page-heading page-heading-photo page-heading-has-cue ${className}`}
+      >
+        <div className="page-heading-visual" aria-hidden="true">
+          <Photo name={background} alt="" priority sizes="100vw" />
+        </div>
+        <div className="page-heading-content">
+          <Breadcrumbs
+            locale={locale}
+            items={breadcrumbs || [{ label: eyebrow || title }]}
+          />
+          {eyebrow && (
+            <span className="eyebrow">
+              <i />
+              {eyebrow}
+            </span>
+          )}
+          <h1>{title}</h1>
+          {intro && <p>{intro}</p>}
+        </div>
+        <ScrollCue
           locale={locale}
-          items={breadcrumbs || [{ label: eyebrow || title }]}
-        />
-        {eyebrow && (
-          <span className="eyebrow">
-            <i />
-            {eyebrow}
-          </span>
-        )}
-        <h1>{title}</h1>
-        {intro && <p>{intro}</p>}
-      </div>
-      {scrollTarget && (
-        <a
-          className="page-scroll-cue"
-          href={`#${scrollTarget}`}
-          aria-label={
-            locale === "uk"
-              ? "Прокрутити до форми запиту"
-              : "Scroll to the inquiry form"
+          target={scrollTarget}
+          label={
+            scrollTarget === "inquiry-form-section"
+              ? locale === "uk"
+                ? "Прокрутити до форми запиту"
+                : "Scroll to the inquiry form"
+              : undefined
           }
-          title={locale === "uk" ? "Форма запиту нижче" : "Inquiry form below"}
-        >
-          <ArrowDown size={26} strokeWidth={1.8} aria-hidden="true" />
-        </a>
+        />
+      </div>
+      {scrollTarget === "page-content" && (
+        <div
+          id="page-content"
+          className="page-content-anchor"
+          aria-hidden="true"
+        />
       )}
-    </div>
+    </>
   );
 }
 export function Catalog({ locale }: { locale: Locale }) {

@@ -13,7 +13,7 @@ This report distinguishes automated HTTP checks from browser interaction checks.
 | `npm run lint`           | Passed    | ESLint, React Hooks, Next.js, and JSX accessibility rules                                                  |
 | `npm test`               | 12 passed | Shared validation, API request limits, origin/content checks, demo mode, and mocked live-delivery outcomes |
 | `npm run test:e2e`       | 11 passed | HTTP integration scenarios against the production server                                                   |
-| `npm run check:links`    | Passed    | 44 pages, 154 distinct links, 86 internal targets, 66 fragment checks                                      |
+| `npm run check:links`    | Passed    | 44 pages, 194 distinct links, 86 internal targets, 106 fragment checks                                      |
 | `npm run check:contrast` | 30 passed | Selected semantic foreground/background pairs                                                              |
 
 HTTP integration checks cover localized routes and 404 responses, one H1 and correct document language, language-switch URLs, query-based filters, material selection passed into the inquiry form, image/font responses, and a same-origin demo POST.
@@ -124,3 +124,10 @@ Eight browser measurements cover both locales at 1440×900, 1280×720, 1024×600
 The inquiry cover has a centered sunflower-yellow down-arrow link in a small dark glass circle. It gently pulses and moves down over a 2.2-second cycle; prefers-reduced-motion disables the animation. The localized accessible link targets #inquiry-form-section. Extra bottom padding reserves its own space below the reading panel.
 
 Six browser checks cover both locales at 1440×900, 1024×600 and 390×844: the control is exactly centered, remains inside the cover and does not overlap the reading panel. Clicking the English mobile cue opened the fragment with the form section at 110 px, below the 81 px header. Production build, lint and the 44-page link crawl pass (154 distinct links, 66 fragment targets). Report: [scroll-cue-checks.json](validation/scroll-cue-checks.json). Screenshot: [inquiry scroll cue](validation/screenshots/request-scroll-cue.png). The reduced-motion CSS override was inspected; no fresh system preference toggle is asserted.
+
+
+## Device-appropriate scroll cues across covers
+
+A shared ScrollCue component now serves all full-screen page headings and the homepage footer strip. Desktop shows a mouse outline with a gently animated wheel and a small chevron; narrow or coarse-pointer screens show a larger animated chevron. Reduced-motion CSS disables both animations. Each cue is a native anchor with a localized accessible name. Internal headers target a zero-height page-content anchor immediately after the cover; the inquiry page retains its specific form anchor and the homepage retains its introduction anchor.
+
+88 browser checks explicitly assert the viewport: all 44 localized routes at 1440×900 and 390×844. Every cue is centered, stays inside its cover, does not overlap the reading panel, resolves its target and shows the expected desktop/mobile variant. A native click on the English mobile catalog cue navigated to #page-content at 110 px below the 81 px header. Production build, lint, all 11 HTTP scenarios and the 44-page link crawl pass (194 unique links, 106 fragments). The internal-page regression scenario now checks cue assets and target IDs as well as backgrounds. Report: [adaptive-scroll-cue-checks.json](validation/adaptive-scroll-cue-checks.json). Cropped previews: [desktop](validation/screenshots/scroll-cue-desktop.png), [mobile](validation/screenshots/scroll-cue-mobile.png).
