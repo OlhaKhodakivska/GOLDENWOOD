@@ -96,7 +96,7 @@ The default `/` route redirects to `/uk`. Equivalent English routes live under `
 
 The visual system combines forest green `#2E4600`, grass green `#486B00`, lime `#A2C523`, earth `#7D4427`, and sunflower `#FBCD4B`.
 
-Photographs remain unfiltered. Hero text uses an opaque reading panel for reliable contrast. Other details include full-area card hover states, native disclosure panels, editorial drop caps, an asymmetric article grid, and a reusable corporate favicon derived from the original forest mark.
+Photographs remain unobscured outside the hero panel. Hero text sits on translucent forest-green glass with localized backdrop blur; the mobile version is more transparent and centered. Contrast is conservatively checked against a white photograph behind the most transparent panel. Other details include full-area card hover states, native disclosure panels, editorial drop caps, an asymmetric article grid, and a reusable corporate favicon derived from the original forest mark.
 
 Accessibility features include skip navigation, semantic landmarks, explicit form labels and errors, keyboard-operated production tabs, mobile-menu focus management, visible focus states, and `prefers-reduced-motion` support. These features do not imply a complete accessibility certification.
 

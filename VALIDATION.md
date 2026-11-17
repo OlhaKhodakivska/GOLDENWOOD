@@ -67,3 +67,17 @@ The earlier responsive run completed 32 of 36 planned geometry checks before a b
 - No current Lighthouse, Core Web Vitals, screen-reader certification, or production load-test results are asserted.
 - Contact and legal pages are demonstration content. A real commercial launch needs actual business details, reviewed legal content, and configured delivery.
 - Search indexing remains disabled by default for the portfolio demo.
+
+## Responsive glass and editorial layout refinement
+
+The three-column editorial grid still reserved a 60 px ordinal column after decorative numbers were removed. This placed the heading in the narrow column and allowed text to collide. All editorial breakpoints now use two minmax(0, ...) content columns, collapsing to a single column at 850 px. Explicit min-width and wrapping rules prevent long localized headings from overflowing.
+
+Hero panels now use localized backdrop blur with opacity 0.86 on desktop and 0.72 on mobile, over a dark forest tint. The mobile panel and its actions are centered. Contrast is modeled over a white photograph at the more transparent mobile setting: approximately 5.95:1 for cream body text and 3.20:1 for the large lime heading. All 30 semantic contrast checks pass.
+
+Desktop primary sections use the visible viewport minus the sticky header as their minimum height. Long content remains free to grow; no fixed-height clipping or forced scroll snapping is introduced. Mobile content sections use natural height with smaller spacing. Short desktop screens have separate hero typography rules.
+
+Browser geometry checks: **119 completed, no detected text-line collisions or horizontal document overflow**. This includes all 44 localized routes at 1440×900 and 390×844, six editorial routes at 1192×800, 14 key routes at 360×640, additional hero sizing checks, and the discovery panels checked open. Closed native disclosure content is excluded from collision detection. These automatic geometry checks do not replace visual inspection of every element.
+
+Hero height matches the viewport minus the header at 1440×900, 1440×700, 1440×600, 1024×768, 390×844 and 360×640 in the checked Ukrainian cases; English is additionally checked at both short desktop heights and both mobile sizes. Screenshot inspection covers desktop/mobile hero and the repaired editorial rows. No JavaScript console errors were returned in the final page check.
+
+Production build, TypeScript, lint, 10 HTTP integration scenarios and the 44-page internal-link crawl pass. Browser results: [layout-checks.json](validation/layout-checks.json). Visual evidence: [desktop glass](validation/screenshots/hero-desktop.png), [mobile glass](validation/screenshots/hero-mobile.png), [editorial columns](validation/screenshots/editorial-desktop.png). Homepage portfolio screenshots have been refreshed.

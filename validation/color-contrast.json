@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-17T09:58:37.719Z",
+  "checkedAt": "2026-11-17T13:15:05.079Z",
   "palette": {
     "forest": "#2E4600",
     "grassland": "#486B00",
@@ -7,7 +7,7 @@
     "soil": "#7D4427",
     "sunflower": "#FBCD4B"
   },
-  "method": "WCAG relative sRGB luminance; normal text 4.5:1, large text and control boundaries 3:1. Hero copy is on an opaque forest-green reading panel; the photograph has no overlay.",
+  "method": "WCAG relative sRGB luminance; normal text 4.5:1, large text and control boundaries 3:1. Hero contrast uses the most transparent mobile glass panel composited over white, conservatively bounding the photo background; photos outside the panel have no overlay.",
   "checks": [
     {
       "role": "Жовта кнопка й картка галузі",
@@ -236,16 +236,16 @@
     {
       "role": "Hero: лаймовий великий заголовок",
       "foreground": "#A2C523",
-      "background": "#2E4600",
-      "ratio": 5.294,
+      "background": "#566350",
+      "ratio": 3.2,
       "minimum": 3,
       "pass": true
     },
     {
       "role": "Hero: світлий основний текст",
       "foreground": "#F7F8EE",
-      "background": "#2E4600",
-      "ratio": 9.846,
+      "background": "#566350",
+      "ratio": 5.951,
       "minimum": 4.5,
       "pass": true
     }

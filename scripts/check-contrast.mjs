@@ -67,15 +67,33 @@ const checks = roles.map(([role, fg, bg, minimum]) => {
     pass: ratio >= minimum,
   };
 });
+const glassRgb = css
+  .match(/--hero-glass-rgb:\s*([\d ]+);/)[1]
+  .trim()
+  .split(/\s+/)
+  .map(Number);
+const glassAlpha = Number(
+  css.match(/--hero-glass-opacity-mobile:\s*([\d.]+);/)[1],
+);
+const glassBackground =
+  "#" +
+  glassRgb
+    .map((c) =>
+      Math.round(c * glassAlpha + 255 * (1 - glassAlpha))
+        .toString(16)
+        .padStart(2, "0"),
+    )
+    .join("")
+    .toUpperCase();
 for (const [role, fg, minimum] of [
   ["Hero: лаймовий великий заголовок", "gold", 3],
   ["Hero: світлий основний текст", "cream", 4.5],
 ]) {
-  const ratio = contrast(color(fg), color("bark"));
+  const ratio = contrast(color(fg), glassBackground);
   checks.push({
     role,
     foreground: color(fg),
-    background: color("bark"),
+    background: glassBackground,
     ratio: Number(ratio.toFixed(3)),
     minimum,
     pass: ratio >= minimum,
@@ -90,7 +108,7 @@ const report = {
     ]),
   ),
   method:
-    "WCAG relative sRGB luminance; normal text 4.5:1, large text and control boundaries 3:1. Hero copy is on an opaque forest-green reading panel; the photograph has no overlay.",
+    "WCAG relative sRGB luminance; normal text 4.5:1, large text and control boundaries 3:1. Hero contrast uses the most transparent mobile glass panel composited over white, conservatively bounding the photo background; photos outside the panel have no overlay.",
   checks,
   passed: checks.every((x) => x.pass),
 };
