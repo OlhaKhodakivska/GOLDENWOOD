@@ -2,6 +2,10 @@
 
 **A bilingual B2B website for plant-based industrial materials.**
 
+**Live demo:** [Українська](https://goldenwood-neon.vercel.app/uk) · [English](https://goldenwood-neon.vercel.app/en)
+
+**Source:** [GitHub repository](https://github.com/OlhaKhodakivska/GOLDENWOOD)
+
 GoldenWood is a full-stack portfolio project exploring how an agricultural materials brand can present its production process, help buyers find suitable raw materials, and turn interest into a structured supply inquiry.
 
 Built with **Next.js 16, React 19, TypeScript, and Tailwind CSS 4**, with Ukrainian and English content, a filterable catalog, editorial pages, and a server-validated inquiry API.
