@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { ArrowUpRight, ArrowRight } from "./icons";
 import { type Locale, type Product, products } from "@/content/repository";
 export function Photo({
   name,
@@ -42,7 +41,6 @@ export function Button({
   return (
     <Link className={`button ${secondary ? "secondary" : ""}`} href={href}>
       {children}
-      <ArrowUpRight size={18} />
     </Link>
   );
 }
@@ -77,50 +75,94 @@ export function ProductCard({
     <Link className="product-card" href={`/${locale}/products/${product.slug}`}>
       <div className="product-image">
         <Photo name={product.image} alt={product.name[locale]} />
-        <span className="circle-arrow">
-          <ArrowUpRight size={21} />
-        </span>
       </div>
       <div className="card-label">
-        {product.type === "input"
+        {product.type === "seed"
           ? locale === "uk"
-            ? "Вхідна сировина"
-            : "Input material"
-          : product.type === "fiber"
+            ? "Насіння"
+            : "Seed"
+          : product.type === "input"
             ? locale === "uk"
-              ? "Волокниста фракція"
-              : "Fiber fraction"
-            : locale === "uk"
-              ? "Деревинна фракція"
-              : "Woody fraction"}
+              ? "Вхідна сировина"
+              : "Input material"
+            : product.type === "fiber"
+              ? locale === "uk"
+                ? "Волокниста фракція"
+                : "Fiber fraction"
+              : locale === "uk"
+                ? "Деревинна фракція"
+                : "Woody fraction"}
       </div>
       <h3>{product.name[locale]}</h3>
       <p>{product.description[locale]}</p>
     </Link>
   );
 }
-export function ProductSpecs({ locale }: { locale: Locale }) {
+export function ProductSpecs({
+  locale,
+  product,
+}: {
+  locale: Locale;
+  product?: Product;
+}) {
   const uk = locale === "uk";
   return (
     <dl className="specs">
-      {(uk
-        ? [
-            ["Вологість і чистота", "За специфікацією партії"],
-            ["Розміри та фракція", "Погоджуються під застосування"],
-            ["Обсяг і період постачання", "Уточнюються під час запиту"],
-            ["Пакування", "Тюки, мішки або біг-беги — за погодженням"],
-            ["Контроль", "Показники та методики погоджуються з покупцем"],
-          ]
-        : [
-            [
-              "Moisture and cleanliness",
-              "According to the batch specification",
-            ],
-            ["Dimensions and fraction", "Agreed for the application"],
-            ["Volume and delivery period", "Discussed during the inquiry"],
-            ["Packaging", "Bales, bags or bulk bags, as agreed"],
-            ["Testing", "Parameters and methods agreed with the buyer"],
-          ]
+      {(product?.type === "seed"
+        ? uk
+          ? [
+              ["Призначення", "Харчова переробка або посів — окремі партії"],
+              [
+                "Чистота, вологість та безпечність",
+                "За погодженою специфікацією та протоколами",
+              ],
+              [
+                "Сорт і схожість для посіву",
+                "Підтверджуються документами посівної партії",
+              ],
+              [
+                "Пакування",
+                "Мішки або біг-беги; харчовий контакт — за призначенням",
+              ],
+              ["Наявність, обсяг і постачання", "Уточнюються під час запиту"],
+            ]
+          : [
+              ["Intended use", "Food processing or sowing — separate batches"],
+              [
+                "Cleanliness, moisture and safety",
+                "Agreed specification and test records",
+              ],
+              [
+                "Variety and germination for sowing",
+                "Verified in the sowing batch documentation",
+              ],
+              [
+                "Packaging",
+                "Bags or bulk bags; food-contact packaging where applicable",
+              ],
+              [
+                "Availability, volume and supply",
+                "Discussed during the inquiry",
+              ],
+            ]
+        : uk
+          ? [
+              ["Вологість і чистота", "За специфікацією партії"],
+              ["Розміри та фракція", "Погоджуються під застосування"],
+              ["Обсяг і період постачання", "Уточнюються під час запиту"],
+              ["Пакування", "Тюки, мішки або біг-беги — за погодженням"],
+              ["Контроль", "Показники та методики погоджуються з покупцем"],
+            ]
+          : [
+              [
+                "Moisture and cleanliness",
+                "According to the batch specification",
+              ],
+              ["Dimensions and fraction", "Agreed for the application"],
+              ["Volume and delivery period", "Discussed during the inquiry"],
+              ["Packaging", "Bales, bags or bulk bags, as agreed"],
+              ["Testing", "Parameters and methods agreed with the buyer"],
+            ]
       ).map(([a, b]) => (
         <div key={a}>
           <dt>{a}</dt>
@@ -222,4 +264,3 @@ export function RelatedProducts({
     </div>
   );
 }
-export { ArrowRight };

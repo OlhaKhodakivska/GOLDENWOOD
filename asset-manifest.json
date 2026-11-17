@@ -166,6 +166,52 @@
         "/images/warehouse-1536.webp"
       ],
       "original": "assets/originals/warehouse-original.png"
+    },
+    {
+      "name": "hemp-seeds",
+      "prompt": "Use case: product-mockup. A separate original 3:2 premium macro product photograph of a generous mound of whole mature industrial hemp seeds, small oval grey-brown mottled seeds with realistic intact shells. A little loose seed spread on a warm cream matte surface, softly lit from a window, natural olive and earth tones, same editorial art direction as a premium industrial hemp materials website. Crisp material detail, no cannabis leaves or buds, no text, no packages, no watermark. Photograph, not illustration.",
+      "purpose": "Seed material catalog and product page",
+      "generated": true,
+      "original": "assets/originals/hemp-seeds-original.png",
+      "files": [
+        "/images/hemp-seeds-640.avif",
+        "/images/hemp-seeds-640.webp",
+        "/images/hemp-seeds-1280.avif",
+        "/images/hemp-seeds-1280.webp",
+        "/images/hemp-seeds-1536.avif",
+        "/images/hemp-seeds-1536.webp"
+      ]
+    },
+    {
+      "name": "hemp-possibilities",
+      "prompt": "Use case: photorealistic-natural. A separate original 3:2 editorial still-life photograph exploring products made with industrial hemp. On a warm cream architectural surface arrange folded natural knit socks, a pale woven fabric, a minimal beige molded composite phone case with natural fiber speckles, a small sample of hemp-lime wall material with clearly visible woody chips, hemp paper, and a small ceramic dish of whole hemp seeds. A fragment of a simple contemporary chair with natural fiber composite seat at right edge. Sophisticated museum-like arrangement, natural side daylight, tactile realistic materials, olive, cream and earth tones. No text, logos, leaves, recreational cannabis, buds or medical products. No environmental badges, no infographics. Wide calm negative space above objects.",
+      "purpose": "Hemp possibilities page and homepage teaser",
+      "generated": true,
+      "original": "assets/originals/hemp-possibilities-original.png",
+      "files": [
+        "/images/hemp-possibilities-640.avif",
+        "/images/hemp-possibilities-640.webp",
+        "/images/hemp-possibilities-1280.avif",
+        "/images/hemp-possibilities-1280.webp",
+        "/images/hemp-possibilities-1536.avif",
+        "/images/hemp-possibilities-1536.webp"
+      ]
+    },
+    {
+      "name": "trucks",
+      "prompt": "Use case: photorealistic-natural. Create one original 3:2 premium documentary photograph of TWO modern European semi-trailer freight trucks at the loading area of a spacious agricultural raw materials warehouse beside industrial hemp fields. Main truck three-quarter side view, second truck in background. Cream/off-white trailers and dark olive green tractor cabs, subtle road dust, realistic wheels, no vehicle manufacturer logos. Both trailers carry the EXACT supplied GoldenWood brand logo as a large flat vinyl print: original dark green conifer forest above original GoldenWood lettering and small gold underline. Preserve the provided evergreen trees, spelling and brand colors, no cannabis leaf substitutions, no other text. Make logo crisp, coherent and legible on the main truck, placed with realistic perspective on trailer side. Natural late-afternoon light, warm cream, olive and earth art direction, realistic industrial logistics photography. This is a conceptual visualization for a B2B holding website. No watermarks, no extra logos or slogans. Reference image is brand identity to print onto the truck, not a scene to recreate.",
+      "purpose": "GoldenWood branded logistics concept on homepage and production page",
+      "generated": true,
+      "original": "assets/originals/trucks-original.png",
+      "files": [
+        "/images/trucks-640.avif",
+        "/images/trucks-640.webp",
+        "/images/trucks-1280.avif",
+        "/images/trucks-1280.webp",
+        "/images/trucks-1536.avif",
+        "/images/trucks-1536.webp"
+      ],
+      "brand_reference": "public/logo-header.svg"
     }
   ]
 }

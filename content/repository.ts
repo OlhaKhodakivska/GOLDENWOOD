@@ -5,7 +5,7 @@ export const text = (uk: string, en: string): Localized => ({ uk, en });
 export const productSchema = z.object({
   slug: z.string(),
   name: z.object({ uk: z.string(), en: z.string() }),
-  type: z.enum(["fiber", "hurd", "input"]),
+  type: z.enum(["fiber", "hurd", "input", "seed"]),
   image: z.string(),
   description: z.object({ uk: z.string(), en: z.string() }),
   applications: z.array(z.string()),
@@ -59,6 +59,22 @@ export const industries = [
     description: text(
       "Костриця для підстилкових та абсорбувальних матеріалів після оцінки пилу й характеристик партії.",
       "Hurd for bedding and absorbent materials after assessment of dust and batch characteristics.",
+    ),
+  },
+  {
+    slug: "food",
+    name: text("Харчові інгредієнти", "Food ingredients"),
+    description: text(
+      "Насіння для харчової переробки: очищення, безпечність та відповідність вимогам покупця підтверджуються для конкретної партії. Посівне насіння не є харчовим за замовчуванням.",
+      "Seed for food processing: cleaning, safety and buyer requirements must be verified for the specific batch. Sowing seed is not food-grade by default.",
+    ),
+  },
+  {
+    slug: "cultivation",
+    name: text("Посівний напрям", "Cultivation"),
+    description: text(
+      "Призначення, сорт, схожість, походження та необхідні документи посівного матеріалу перевіряються окремо. Наявність посівної партії уточнюється під час запиту.",
+      "Intended use, variety, germination, origin and required sowing-seed documents are checked separately. Availability of a sowing batch is discussed during the inquiry.",
     ),
   },
 ];
@@ -122,6 +138,18 @@ export const products: Product[] = z.array(productSchema).parse([
     ),
     applications: ["textile", "paper"],
     stage: 2,
+  },
+  {
+    slug: "hemp-seeds",
+    name: text("Насіння технічних конопель", "Industrial hemp seeds"),
+    type: "seed",
+    image: "hemp-seeds",
+    description: text(
+      "Ціле насіння технічних конопель для погодженого напряму переробки. Харчове або посівне призначення, підготовка та документи визначаються для окремої партії.",
+      "Whole industrial hemp seeds for an agreed processing purpose. Food or sowing use, preparation and documentation are established for the individual batch.",
+    ),
+    applications: ["food", "cultivation"],
+    stage: 1,
   },
 ]);
 export const stages = [

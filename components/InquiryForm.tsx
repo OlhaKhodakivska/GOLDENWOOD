@@ -4,7 +4,7 @@ import { useSearchParams } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useState, useRef } from "react";
-import { ArrowUpRight, CheckCircle2 } from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
 import { inquirySchema, type Inquiry } from "@/lib/inquiry";
 import { products, type Locale } from "@/content/repository";
 export default function InquiryForm({ locale }: { locale: Locale }) {
@@ -125,7 +125,7 @@ export default function InquiryForm({ locale }: { locale: Locale }) {
       <div className="form-grid">
         <label className="form-field">
           <span>{uk ? "Тип звернення" : "Inquiry type"} *</span>
-          <select {...register("kind")}>
+          <select defaultValue={kind} {...register("kind")}>
             {[
               ["supply", uk ? "Постачання" : "Supply"],
               ["samples", uk ? "Зразки" : "Samples"],
@@ -140,7 +140,7 @@ export default function InquiryForm({ locale }: { locale: Locale }) {
         </label>
         <label className="form-field">
           <span>{uk ? "Матеріал" : "Material"} *</span>
-          <select {...register("material")}>
+          <select defaultValue={material} {...register("material")}>
             <option value="consultation">
               {uk ? "Потрібна консультація" : "I need a consultation"}
             </option>
@@ -173,7 +173,7 @@ export default function InquiryForm({ locale }: { locale: Locale }) {
         )}
         <label className="form-field">
           <span>{uk ? "Одиниця вимірювання" : "Unit"}</span>
-          <select {...register("unit")}>
+          <select defaultValue="consultation" {...register("unit")}>
             <option value="consultation">
               {uk ? "Потрібна консультація" : "Consultation needed"}
             </option>
@@ -253,7 +253,6 @@ export default function InquiryForm({ locale }: { locale: Locale }) {
           : uk
             ? "Надіслати запит"
             : "Submit inquiry"}
-        <ArrowUpRight size={18} />
       </button>
       <div
         ref={status}

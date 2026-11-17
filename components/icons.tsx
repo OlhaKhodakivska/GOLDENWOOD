@@ -1,5 +1,6 @@
 "use client";
 export {
+  Trees,
   ArrowDown,
   ArrowUpRight,
   ArrowRight,

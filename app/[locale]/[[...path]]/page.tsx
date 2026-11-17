@@ -4,6 +4,7 @@ import { Suspense } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Home from "@/components/Home";
+import HempPage from "@/components/HempPage";
 import {
   Catalog,
   Material,
@@ -19,6 +20,7 @@ import {
 import { repository, pages, type Locale } from "@/content/repository";
 type Props = { params: Promise<{ locale: string; path?: string[] }> };
 const names: Record<string, [string, string]> = {
+  hemp: ["Можливості технічних конопель", "The possibilities of hemp"],
   about: ["Холдинг", "Holding"],
   production: ["Виробництво", "Production"],
   products: ["Сировина", "Materials"],
@@ -45,13 +47,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     ? "Технічні коноплі, первинна переробка та оптове постачання волокна й костриці. Каталог матеріалів та B2B-запит."
     : "Industrial hemp, primary processing and wholesale fiber and hurd supply. Material catalog and B2B inquiries.";
   const descriptions: Record<string, [string, string]> = {
+    hemp: [
+      "Від шкарпеток до будинків: текстиль, меблі, композити, чохли та харчові інгредієнти. Швидкий ріст, відповідальна сівозміна й підтримка лісів.",
+      "From socks to homes: textiles, furniture, composites, phone cases and food ingredients. Fast growth, responsible crop rotation and forest protection.",
+    ],
     production: [
       "Шість етапів від вирощування технічних конопель до декортикації, сортування та підготовки партії до постачання.",
       "Six stages from industrial hemp cultivation to decortication, sorting and preparation of a supply batch.",
     ],
     products: [
-      "Каталог: декортиковане й коротке волокно, костриця, подрібнена костриця та конопляна треста. Пошук за матеріалом і галуззю.",
-      "Explore decorticated and short fiber, hemp hurd, crushed hurd and retted stalks. Filter by material and application.",
+      "Каталог: декортиковане й коротке волокно, костриця, подрібнена костриця, конопляна треста й насіння. Пошук за матеріалом і галуззю.",
+      "Explore decorticated and short fiber, hemp hurd, crushed hurd, retted stalks and hemp seeds. Filter by material and application.",
     ],
     industries: [
       "Рослинна сировина для будівельних матеріалів, біокомпозитів, паперу, нетканих структур та інших виробничих процесів.",
@@ -129,7 +135,8 @@ export default async function Page({ params }: Props) {
   if (path.length === 0) content = <Home locale={l} />;
   else if (path.length === 1) {
     const key = path[0];
-    if (key === "products") content = <Catalog locale={l} />;
+    if (key === "hemp") content = <HempPage locale={l} />;
+    else if (key === "products") content = <Catalog locale={l} />;
     else if (key === "production") content = <Production locale={l} />;
     else if (key === "industries") content = <Industries locale={l} />;
     else if (key === "knowledge") content = <Knowledge locale={l} />;

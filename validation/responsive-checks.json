@@ -1,0 +1,297 @@
+{
+  "date": "2026-11-16",
+  "completed": 32,
+  "planned": 36,
+  "status": "partial_browser_run",
+  "note": "Browser tab crashed after 32 completed responsive checks. No horizontal overflow was observed in completed checks. Remaining desktop English checks were not completed.",
+  "checks": [
+    {
+      "path": "/uk",
+      "target": 360,
+      "client": 345,
+      "h1": 1,
+      "overflow": [],
+      "scroll": 345,
+      "width": 360
+    },
+    {
+      "path": "/uk/hemp",
+      "target": 360,
+      "client": 345,
+      "h1": 1,
+      "overflow": [],
+      "scroll": 345,
+      "width": 360
+    },
+    {
+      "path": "/uk/production",
+      "target": 360,
+      "client": 345,
+      "h1": 1,
+      "overflow": [],
+      "scroll": 345,
+      "width": 360
+    },
+    {
+      "path": "/uk/products",
+      "target": 360,
+      "client": 345,
+      "h1": 1,
+      "overflow": [],
+      "scroll": 345,
+      "width": 360
+    },
+    {
+      "path": "/uk/products/hemp-seeds",
+      "target": 360,
+      "client": 345,
+      "h1": 1,
+      "overflow": [],
+      "scroll": 345,
+      "width": 360
+    },
+    {
+      "path": "/uk/request",
+      "target": 360,
+      "client": 345,
+      "h1": 1,
+      "overflow": [],
+      "scroll": 345,
+      "width": 360
+    },
+    {
+      "path": "/uk/contacts",
+      "target": 360,
+      "client": 345,
+      "h1": 1,
+      "overflow": [],
+      "scroll": 345,
+      "width": 360
+    },
+    {
+      "path": "/en",
+      "target": 360,
+      "client": 345,
+      "h1": 1,
+      "overflow": [],
+      "scroll": 345,
+      "width": 360
+    },
+    {
+      "path": "/en/hemp",
+      "target": 360,
+      "client": 345,
+      "h1": 1,
+      "overflow": [],
+      "scroll": 345,
+      "width": 360
+    },
+    {
+      "path": "/en/products",
+      "target": 360,
+      "client": 345,
+      "h1": 1,
+      "overflow": [],
+      "scroll": 345,
+      "width": 360
+    },
+    {
+      "path": "/en/request",
+      "target": 360,
+      "client": 345,
+      "h1": 1,
+      "overflow": [],
+      "scroll": 345,
+      "width": 360
+    },
+    {
+      "path": "/en/about",
+      "target": 360,
+      "client": 345,
+      "h1": 1,
+      "overflow": [],
+      "scroll": 345,
+      "width": 360
+    },
+    {
+      "path": "/uk",
+      "target": 768,
+      "client": 753,
+      "h1": 1,
+      "overflow": [],
+      "scroll": 753,
+      "width": 768
+    },
+    {
+      "path": "/uk/hemp",
+      "target": 768,
+      "client": 753,
+      "h1": 1,
+      "overflow": [],
+      "scroll": 753,
+      "width": 768
+    },
+    {
+      "path": "/uk/production",
+      "target": 768,
+      "client": 753,
+      "h1": 1,
+      "overflow": [],
+      "scroll": 753,
+      "width": 768
+    },
+    {
+      "path": "/uk/products",
+      "target": 768,
+      "client": 753,
+      "h1": 1,
+      "overflow": [],
+      "scroll": 753,
+      "width": 768
+    },
+    {
+      "path": "/uk/products/hemp-seeds",
+      "target": 768,
+      "client": 753,
+      "h1": 1,
+      "overflow": [],
+      "scroll": 753,
+      "width": 768
+    },
+    {
+      "path": "/uk/request",
+      "target": 768,
+      "client": 753,
+      "h1": 1,
+      "overflow": [],
+      "scroll": 753,
+      "width": 768
+    },
+    {
+      "path": "/uk/contacts",
+      "target": 768,
+      "client": 753,
+      "h1": 1,
+      "overflow": [],
+      "scroll": 753,
+      "width": 768
+    },
+    {
+      "path": "/en",
+      "target": 768,
+      "client": 753,
+      "h1": 1,
+      "overflow": [],
+      "scroll": 753,
+      "width": 768
+    },
+    {
+      "path": "/en/hemp",
+      "target": 768,
+      "client": 753,
+      "h1": 1,
+      "overflow": [],
+      "scroll": 753,
+      "width": 768
+    },
+    {
+      "path": "/en/products",
+      "target": 768,
+      "client": 753,
+      "h1": 1,
+      "overflow": [],
+      "scroll": 753,
+      "width": 768
+    },
+    {
+      "path": "/en/request",
+      "target": 768,
+      "client": 753,
+      "h1": 1,
+      "overflow": [],
+      "scroll": 753,
+      "width": 768
+    },
+    {
+      "path": "/en/about",
+      "target": 768,
+      "client": 753,
+      "h1": 1,
+      "overflow": [],
+      "scroll": 753,
+      "width": 768
+    },
+    {
+      "path": "/uk",
+      "target": 1440,
+      "client": 1425,
+      "h1": 1,
+      "overflow": [],
+      "scroll": 1425,
+      "width": 1440
+    },
+    {
+      "path": "/uk/hemp",
+      "target": 1440,
+      "client": 1425,
+      "h1": 1,
+      "overflow": [],
+      "scroll": 1425,
+      "width": 1440
+    },
+    {
+      "path": "/uk/production",
+      "target": 1440,
+      "client": 1425,
+      "h1": 1,
+      "overflow": [],
+      "scroll": 1425,
+      "width": 1440
+    },
+    {
+      "path": "/uk/products",
+      "target": 1440,
+      "client": 1425,
+      "h1": 1,
+      "overflow": [],
+      "scroll": 1425,
+      "width": 1440
+    },
+    {
+      "path": "/uk/products/hemp-seeds",
+      "target": 1440,
+      "client": 1425,
+      "h1": 1,
+      "overflow": [],
+      "scroll": 1425,
+      "width": 1440
+    },
+    {
+      "path": "/uk/request",
+      "target": 1440,
+      "client": 1425,
+      "h1": 1,
+      "overflow": [],
+      "scroll": 1425,
+      "width": 1440
+    },
+    {
+      "path": "/uk/contacts",
+      "target": 1440,
+      "client": 1425,
+      "h1": 1,
+      "overflow": [],
+      "scroll": 1425,
+      "width": 1440
+    },
+    {
+      "path": "/en",
+      "target": 1440,
+      "client": 1425,
+      "h1": 1,
+      "overflow": [],
+      "scroll": 1425,
+      "width": 1440
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 import Link from "next/link";
+import LogisticsSection from "./LogisticsSection";
+import { HeroVisual } from "./HomeNavigation";
 import {
-  ArrowDown,
-  ArrowUpRight,
   Layers,
   Waves,
   Factory,
@@ -21,17 +21,8 @@ export default function Home({ locale }: { locale: Locale }) {
   const uk = locale === "uk";
   return (
     <>
-      <section className="hero">
-        <Photo
-          name="hero"
-          alt={
-            uk
-              ? "Промислові посіви технічних конопель із висоти"
-              : "Aerial view of industrial hemp crops"
-          }
-          priority
-        />
-        <div className="hero-shade" />
+      <section className="hero" id="top">
+        <HeroVisual locale={locale} />
         <div className="hero-content">
           <span className="eyebrow">
             <i />
@@ -39,7 +30,7 @@ export default function Home({ locale }: { locale: Locale }) {
               ? "ВІД ЗЕМЛІ — ДО НОВИХ МОЖЛИВОСТЕЙ"
               : "FROM THE LAND — TO NEW POSSIBILITIES"}
           </span>
-          <h1>
+          <h1 id="home-heading" tabIndex={-1}>
             {uk ? (
               <>
                 Вирощуємо ресурс.
@@ -69,7 +60,6 @@ export default function Home({ locale }: { locale: Locale }) {
             </Button>
             <Link className="hero-link" href={`/${locale}/request`}>
               {uk ? "Обговорити постачання" : "Discuss supply"}
-              <ArrowUpRight size={18} />
             </Link>
           </div>
         </div>
@@ -80,30 +70,44 @@ export default function Home({ locale }: { locale: Locale }) {
             aria-label={uk ? "Далі про холдинг" : "Learn about the holding"}
           >
             <span>{uk ? "ДОСЛІДЖУЙТЕ GOLDENWOOD" : "EXPLORE GOLDENWOOD"}</span>
-            <ArrowDown size={19} />
           </a>
         </div>
       </section>
-      <div className="value-strip">
-        <span>
-          <Sprout size={19} />
-          {uk
-            ? "Власний погляд на повний цикл"
-            : "An integrated supply chain perspective"}
-        </span>
-        <i />
-        <span>
-          <Layers size={19} />
-          {uk
-            ? "Матеріали для реальних задач"
-            : "Materials for real applications"}
-        </span>
-        <i />
-        <span>
-          <PackageCheck size={19} />
-          {uk ? "Партнерство на кожному етапі" : "Partnership at every stage"}
-        </span>
-      </div>
+      <nav
+        className="resource-highlights"
+        aria-label={uk ? "Знайомство з GoldenWood" : "Discover GoldenWood"}
+      >
+        {[
+          {
+            label: uk
+              ? "Багато можливостей однієї рослини"
+              : "One plant, many possibilities",
+            note: uk
+              ? "Познайомтеся з технічними коноплями"
+              : "Get to know industrial hemp",
+            href: `/${locale}/hemp`,
+          },
+          {
+            label: uk
+              ? "Матеріали для вашого виробництва"
+              : "Materials for your production",
+            note: uk ? "Волокно, костриця та насіння" : "Fiber, hurd and seeds",
+            href: `/${locale}/products`,
+          },
+          {
+            label: uk ? "Від поля до постачання" : "From field to supply",
+            note: uk
+              ? "Дослідіть шлях сировини"
+              : "Explore the material journey",
+            href: `/${locale}/production`,
+          },
+        ].map((item) => (
+          <Link key={item.href} href={item.href}>
+            <span className="resource-label">{item.label}</span>
+            <span className="resource-note">{item.note}</span>
+          </Link>
+        ))}
+      </nav>
       <section className="section intro-section reveal" id="introduction">
         <div>
           <span className="eyebrow">
@@ -138,7 +142,6 @@ export default function Home({ locale }: { locale: Locale }) {
           </p>
           <Link className="text-link" href={`/${locale}/about`}>
             {uk ? "Більше про холдинг" : "About the holding"}
-            <ArrowUpRight size={19} />
           </Link>
         </div>
       </section>
@@ -170,19 +173,18 @@ export default function Home({ locale }: { locale: Locale }) {
           />
           <Link className="text-link" href={`/${locale}/products`}>
             {uk ? "Уся сировина" : "All materials"}
-            <ArrowUpRight size={20} />
           </Link>
         </div>
         <div className="product-grid">
-          {[products[0], products[2], products[1]].map((p) => (
+          {[products[0], products[2], products[5]].map((p) => (
             <ProductCard key={p.slug} product={p} locale={locale} />
           ))}
         </div>
         <div className="material-caption">
           <span>
             {uk
-              ? "ВОЛОКНО · КОСТРИЦЯ · СТЕБЛОВА СИРОВИНА"
-              : "FIBER · HURD · STALK RAW MATERIAL"}
+              ? "ВОЛОКНО · КОСТРИЦЯ · НАСІННЯ · СТЕБЛОВА СИРОВИНА"
+              : "FIBER · HURD · SEEDS · STALK RAW MATERIAL"}
           </span>
           <p>
             {uk
@@ -216,7 +218,7 @@ export default function Home({ locale }: { locale: Locale }) {
           </small>
         </div>
         <div className="industry-links">
-          {industries.map((i, index) => {
+          {industries.slice(0, 6).map((i, index) => {
             const Icon = [Layers, Factory, Waves, Layers, Sprout, PackageCheck][
               index
             ];
@@ -224,21 +226,12 @@ export default function Home({ locale }: { locale: Locale }) {
               <Link key={i.slug} href={`/${locale}/industries#${i.slug}`}>
                 <Icon size={25} strokeWidth={1.2} />
                 <span>{i.name[locale]}</span>
-                <ArrowUpRight size={21} />
               </Link>
             );
           })}
         </div>
       </section>
-      <section className="production-feature reveal">
-        <Photo
-          name="factory"
-          alt={
-            uk
-              ? "Концептуальна візуалізація цеху механічної переробки"
-              : "Conceptual visualization of a mechanical processing hall"
-          }
-        />
+      <section className="production-feature production-above reveal">
         <div className="production-copy">
           <span className="eyebrow">
             {uk
@@ -264,6 +257,14 @@ export default function Home({ locale }: { locale: Locale }) {
               : "AI-generated conceptual visualization."}
           </small>
         </div>
+        <Photo
+          name="factory"
+          alt={
+            uk
+              ? "Концептуальна візуалізація цеху механічної переробки"
+              : "Conceptual visualization of a mechanical processing hall"
+          }
+        />
       </section>
       <section className="section quality-section reveal">
         <SectionIntro
@@ -335,10 +336,75 @@ export default function Home({ locale }: { locale: Locale }) {
             {uk
               ? "Наш підхід до відповідальності"
               : "Our approach to responsibility"}
-            <ArrowUpRight size={19} />
           </Link>
         </div>
       </section>
+      <section className="section hemp-teaser discovery-feature reveal">
+        <div>
+          <SectionIntro
+            eyebrow={uk ? "ЧИ ЗНАЛИ ВИ?" : "DID YOU KNOW?"}
+            title={uk ? "Від шкарпеток — до будинків." : "From socks to homes."}
+            description={
+              uk
+                ? "Одяг, меблі, чохли на телефон, будівельні матеріали та харчові інгредієнти. Відкрийте потенціал рослини, яка дає врожай за сезон."
+                : "Clothes, furniture, phone cases, building materials and food ingredients. Explore the potential of a plant harvested within a season."
+            }
+          />
+          <div className="discovery-topics">
+            {[
+              {
+                title: uk ? "Волокно стає тканиною" : "Fiber becomes fabric",
+                body: uk
+                  ? "Зовнішня частина стебла дає волокно для пряжі, тканин, нетканих матеріалів і композитів. Результат залежить від підготовки та технології переробки."
+                  : "The outer stalk provides fiber for yarn, textiles, nonwovens and composites. The result depends on preparation and processing technology.",
+              },
+              {
+                title: uk
+                  ? "Костриця знаходить місце в будинку"
+                  : "Hurd finds a place in buildings",
+                body: uk
+                  ? "Деревинну серцевину використовують як рослинний заповнювач у конопляно-вапняних сумішах. Інші застосування — підстилка та абсорбенти."
+                  : "The woody core is used as a plant-based aggregate in hemp-lime mixes. Other applications include bedding and absorbents.",
+              },
+              {
+                title: uk
+                  ? "Насіння відкриває інший напрям"
+                  : "Seeds open another chapter",
+                body: uk
+                  ? "Харчове насіння переробляють на олію, очищене ядро та білкові інгредієнти. Для посіву потрібен відповідний посівний матеріал — призначення партії важливо визначити заздалегідь."
+                  : "Food-grade seeds can become oil, hulled seeds and protein ingredients. Sowing requires suitable planting seed, so each batch needs a clearly defined purpose.",
+              },
+            ].map((topic) => (
+              <details key={topic.title}>
+                <summary>
+                  {topic.title}
+                  <span aria-hidden="true" className="discovery-toggle" />
+                </summary>
+                <p>{topic.body}</p>
+              </details>
+            ))}
+          </div>
+          <p className="eco-note">
+            {uk
+              ? "Екологічно чистий продукт — наш орієнтир: простежувана сировина, контроль якості й дбайливе вирощування. Властивості конкретної партії потребують підтвердження."
+              : "An environmentally sound product is our ambition: traceable materials, quality controls and careful cultivation. The properties of a specific batch require verification."}
+          </p>
+          <Button href={`/${locale}/hemp`}>
+            {uk
+              ? "Дослідити можливості конопель"
+              : "Discover hemp’s possibilities"}
+          </Button>
+        </div>
+        <Photo
+          name="hemp-possibilities"
+          alt={
+            uk
+              ? "Речі з конопляних матеріалів: концептуальна композиція"
+              : "Conceptual arrangement of objects made with hemp materials"
+          }
+        />
+      </section>
+      <LogisticsSection locale={locale} />
       <section className="grower-section reveal">
         <div>
           <span className="eyebrow">
@@ -367,7 +433,7 @@ export default function Home({ locale }: { locale: Locale }) {
           }
         />
       </section>
-      <section className="section knowledge-section reveal">
+      <section className="section knowledge-section journal-section reveal">
         <div className="section-heading">
           <SectionIntro
             eyebrow={uk ? "ЦЕНТР ЗНАНЬ" : "KNOWLEDGE CENTER"}
@@ -379,7 +445,6 @@ export default function Home({ locale }: { locale: Locale }) {
           />
           <Link className="text-link" href={`/${locale}/knowledge`}>
             {uk ? "Усі матеріали" : "All articles"}
-            <ArrowUpRight size={19} />
           </Link>
         </div>
         <div className="article-grid">
@@ -396,7 +461,6 @@ export default function Home({ locale }: { locale: Locale }) {
               <h3>{a.title[locale]}</h3>
               <span className="text-link">
                 {uk ? "Читати статтю" : "Read article"}
-                <ArrowUpRight size={18} />
               </span>
             </Link>
           ))}

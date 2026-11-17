@@ -1,9 +1,11 @@
 "use client";
 /* eslint-disable @next/next/no-img-element -- Original brand SVG is served directly without rasterization. */
 import Link from "next/link";
+import { ScrollProgress } from "./MotionParts";
+import { HomeLogo } from "./HomeNavigation";
 import { usePathname, useSearchParams } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
-import { Menu, X, ArrowUpRight, ChevronDown } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { type Locale } from "@/content/repository";
 export default function Header({ locale }: { locale: Locale }) {
   const uk = locale === "uk";
@@ -20,6 +22,7 @@ export default function Header({ locale }: { locale: Locale }) {
     ["industries", uk ? "Галузі" : "Industries"],
   ];
   const others = [
+    ["hemp", uk ? "Можливості конопель" : "Why hemp"],
     ["sustainability", uk ? "Відповідальність" : "Responsibility"],
     ["partners", uk ? "Агропартнерам" : "For growers"],
     ["knowledge", uk ? "Матеріали та відповіді" : "Knowledge"],
@@ -82,13 +85,9 @@ export default function Header({ locale }: { locale: Locale }) {
     (search.toString() ? `?${search}` : "");
   return (
     <header className={`site-header ${scrolled ? "scrolled" : ""}`}>
-      <Link
-        href={`/${locale}`}
-        className="brand"
-        aria-label="GoldenWood — Home"
-      >
+      <HomeLogo locale={locale} className="brand">
         <img src="/logo-header.svg" alt="GoldenWood" width="132" height="88" />
-      </Link>
+      </HomeLogo>
       <nav
         className="desktop-nav"
         aria-label={uk ? "Основна навігація" : "Main navigation"}
@@ -103,9 +102,7 @@ export default function Header({ locale }: { locale: Locale }) {
           </Link>
         ))}
         <details className="more-menu">
-          <summary>
-            {uk ? "Більше" : "More"} <ChevronDown size={12} />
-          </summary>
+          <summary>{uk ? "Більше" : "More"}</summary>
           <div>
             {others.map(([slug, label]) => (
               <Link key={slug} href={`/${locale}/${slug}`}>
@@ -116,12 +113,23 @@ export default function Header({ locale }: { locale: Locale }) {
         </details>
       </nav>
       <div className="header-actions">
-        <Link className="language" href={languageHref} hrefLang={other}>
-          {other.toUpperCase()} <ChevronDown size={12} />
+        <Link
+          className="language"
+          href={languageHref}
+          hrefLang={other}
+          aria-label={uk ? "Switch to English" : "Перемкнути на українську"}
+          title={uk ? "English" : "Українська"}
+        >
+          <img
+            src={`/flags/${other === "en" ? "us" : "ua"}.svg`}
+            alt=""
+            width="28"
+            height="20"
+          />
+          <span aria-hidden="true">{other === "en" ? "EN" : "UA"}</span>
         </Link>
         <Link className="header-cta" href={`/${locale}/request`}>
           {uk ? "Обговорити постачання" : "Discuss supply"}
-          <ArrowUpRight size={16} />
         </Link>
         <button
           ref={trigger}
@@ -135,6 +143,7 @@ export default function Header({ locale }: { locale: Locale }) {
           {open ? <X /> : <Menu />}
         </button>
       </div>
+      <ScrollProgress />
       {open && (
         <nav
           ref={panel}
@@ -161,7 +170,6 @@ export default function Header({ locale }: { locale: Locale }) {
               onClick={() => setOpen(false)}
             >
               {label}
-              <ArrowUpRight size={20} />
             </Link>
           ))}
         </nav>

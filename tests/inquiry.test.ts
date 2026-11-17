@@ -40,7 +40,7 @@ test("shared schema rejects invalid email, honeypot, unknown material, missing c
     );
 });
 test("all products and articles have both locales and unique slugs", () => {
-  assert.equal(new Set(products.map((p) => p.slug)).size, 5);
+  assert.equal(new Set(products.map((p) => p.slug)).size, 6);
   for (const p of products) {
     assert.ok(productSchema.safeParse(p).success);
     assert.ok(p.name.uk && p.name.en && p.description.uk && p.description.en);

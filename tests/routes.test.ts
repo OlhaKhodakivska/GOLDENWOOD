@@ -2,33 +2,34 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import { products, articles } from "../content/repository";
 const base = process.env.TEST_BASE_URL || "http://localhost:3000";
+const routePaths = [
+  "",
+  "/about",
+  "/hemp",
+  "/production",
+  "/products",
+  "/industries",
+  "/sustainability",
+  "/partners",
+  "/knowledge",
+  "/contacts",
+  "/request",
+  "/privacy",
+  "/terms",
+  ...products.map((p) => `/products/${p.slug}`),
+  ...articles.map((a) => `/knowledge/${a.slug}`),
+];
 test("root redirects to Ukrainian", async () => {
   const r = await fetch(base, { redirect: "manual" });
   assert.ok([307, 308].includes(r.status));
   assert.equal(r.headers.get("location"), "/uk");
 });
 test(
-  "all 40 localized routes render one H1, localized language and no indexing",
+  "all 44 localized routes render one H1, localized language and no indexing",
   { timeout: 120000 },
   async () => {
-    const paths = [
-      "",
-      "/about",
-      "/production",
-      "/products",
-      "/industries",
-      "/sustainability",
-      "/partners",
-      "/knowledge",
-      "/contacts",
-      "/request",
-      "/privacy",
-      "/terms",
-      ...products.map((p) => `/products/${p.slug}`),
-      ...articles.map((a) => `/knowledge/${a.slug}`),
-    ];
     for (const l of ["uk", "en"])
-      for (const path of paths) {
+      for (const path of routePaths) {
         const r = await fetch(`${base}/${l}${path}`);
         assert.equal(r.status, 200, `${l}${path}`);
         const html = await r.text();
@@ -40,6 +41,19 @@ test(
         assert.ok(html.includes(`lang="${l}"`), `${l}${path} lang`);
         assert.ok(html.includes("noindex"), `${l}${path} noindex`);
         assert.ok(!html.includes("lorem ipsum"));
+        const logoLinks = [
+          ...html.matchAll(/<a\b([^>]*)>([\s\S]*?)<\/a>/g),
+        ].filter((match) => match[2].includes("/logo-header.svg"));
+        assert.equal(
+          logoLinks.length,
+          2,
+          `${l}${path} header and footer logos`,
+        );
+        assert.ok(
+          logoLinks.every((match) => match[1].includes(`href="/${l}#top"`)),
+          `${l}${path} home top links`,
+        );
+        if (path === "") assert.ok(html.includes('id="top"'));
       }
   },
 );
@@ -64,7 +78,7 @@ test("all optimized image files referenced by manifest exist and load", async ()
   const manifest = JSON.parse(
     await fs.readFile("asset-manifest.json", "utf8"),
   ) as { assets: { name: string; files: string[] }[] };
-  assert.equal(manifest.assets.length, 11);
+  assert.equal(manifest.assets.length, 14);
   for (const a of manifest.assets) {
     assert.equal(a.files.length, 6);
     for (const file of a.files) {
@@ -98,10 +112,12 @@ test(
   async () => {
     const urls = new Set<string>();
     for (const l of ["uk", "en"]) {
-      const html = await (await fetch(`${base}/${l}`)).text();
-      for (const match of html.matchAll(/<a[^>]+href="([^"]+)"/g)) {
-        const href = match[1].replaceAll("&amp;", "&");
-        if (href.startsWith("/")) urls.add(href.split("#")[0]);
+      for (const path of routePaths) {
+        const html = await (await fetch(`${base}/${l}${path}`)).text();
+        for (const match of html.matchAll(/<a[^>]+href="([^"]+)"/g)) {
+          const href = match[1].replaceAll("&amp;", "&");
+          if (href.startsWith("/")) urls.add(href.split("#")[0]);
+        }
       }
     }
     for (const url of urls)
@@ -142,4 +158,71 @@ test("real same-origin endpoint confirms demo validation", async () => {
   const result = await response.json();
   assert.equal(result.mode, "demo");
   assert.equal(result.delivered, false);
+});
+
+test("hemp guide, forest support and seed inquiry work in both locales", async () => {
+  for (const locale of ["uk", "en"]) {
+    const hemp = await (await fetch(`${base}/${locale}/hemp`)).text();
+    assert.ok(hemp.includes("https://www.forestcom.org.ua/donate"));
+    assert.ok(
+      hemp.includes(
+        "https://www.rainforesttrust.org/get-involved/ways-to-give/",
+      ),
+    );
+    assert.ok(hemp.includes(locale === "uk" ? "Від шкарпеток" : "From socks"));
+    assert.ok(hemp.includes(locale === "uk" ? "чохли" : "phone cases"));
+    assert.ok(hemp.includes('class="story-prose"'));
+    assert.ok(hemp.includes(locale === "uk" ? "Нове життя" : "A new life"));
+    assert.ok(!hemp.includes('href="https://agriculture.ec.europa.eu'));
+    assert.ok(!hemp.includes('href="https://eu-cap-network.ec.europa.eu'));
+    assert.ok(!hemp.includes('href="https://igen.dk'));
+    assert.ok(!hemp.includes("Швидко рости."));
+    assert.ok(!hemp.includes("Рости відповідально."));
+
+    const seed = await (
+      await fetch(`${base}/${locale}/products/hemp-seeds`)
+    ).text();
+    assert.ok(seed.includes(`/${locale}/request?material=hemp-seeds`));
+    assert.ok(
+      seed.includes(locale === "uk" ? "окремі партії" : "separate batches"),
+    );
+    const form = await (
+      await fetch(`${base}/${locale}/request?material=hemp-seeds`)
+    ).text();
+    assert.match(form, /<option value="hemp-seeds" selected="">/);
+    const filtered = await (
+      await fetch(`${base}/${locale}/products?type=seed`)
+    ).text();
+    assert.ok(filtered.includes(`/${locale}/products/hemp-seeds`));
+    assert.ok(!filtered.includes("<h3>Decorticated hemp fiber</h3>"));
+    assert.ok(!filtered.includes("<h3>Декортиковане волокно</h3>"));
+  }
+});
+
+test("production captions precede images and actions contain no decorative arrows", async () => {
+  const home = await (await fetch(`${base}/uk`)).text();
+  assert.ok(
+    home.indexOf("<h3>Вирощування</h3>") <
+      home.indexOf('src="/images/field-1280.webp"'),
+  );
+  const production = await (await fetch(`${base}/uk/production`)).text();
+  const story = production.slice(production.indexOf('class="story-step"'));
+  assert.ok(
+    story.indexOf("<h2>Вирощування</h2>") <
+      story.indexOf('src="/images/field-1280.webp"'),
+  );
+  for (const html of [
+    home,
+    production,
+    await (await fetch(`${base}/uk/request`)).text(),
+  ]) {
+    assert.ok(!html.includes("lucide-arrow-up-right"));
+    assert.ok(!html.includes("lucide-arrow-right"));
+    assert.ok(html.includes("https://www.forestcom.org.ua/donate"));
+    assert.ok(
+      html.includes(
+        "https://www.rainforesttrust.org/get-involved/ways-to-give/",
+      ),
+    );
+  }
 });

@@ -1,0 +1,254 @@
+{
+  "checkedAt": "2026-11-17T09:58:37.719Z",
+  "palette": {
+    "forest": "#2E4600",
+    "grassland": "#486B00",
+    "lime": "#A2C523",
+    "soil": "#7D4427",
+    "sunflower": "#FBCD4B"
+  },
+  "method": "WCAG relative sRGB luminance; normal text 4.5:1, large text and control boundaries 3:1. Hero copy is on an opaque forest-green reading panel; the photograph has no overlay.",
+  "checks": [
+    {
+      "role": "Жовта кнопка й картка галузі",
+      "foreground": "#2E4600",
+      "background": "#FBCD4B",
+      "ratio": 6.995,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "role": "Жовта кнопка при наведенні",
+      "foreground": "#2E4600",
+      "background": "#F3BF2D",
+      "ratio": 6.175,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "role": "Жовтий підпис на лісовій картці",
+      "foreground": "#FBCD4B",
+      "background": "#2E4600",
+      "ratio": 6.995,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "role": "Світлий підпис на трав’яній картці",
+      "foreground": "#F7F8EE",
+      "background": "#486B00",
+      "ratio": 5.806,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "role": "Основний текст",
+      "foreground": "#2E4600",
+      "background": "#FAFBF5",
+      "ratio": 10.13,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "role": "Текст на кремовому",
+      "foreground": "#2E4600",
+      "background": "#F7F8EE",
+      "ratio": 9.846,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "role": "Другорядний текст",
+      "foreground": "#526044",
+      "background": "#FAFBF5",
+      "ratio": 6.478,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "role": "Другорядний текст на тонованому",
+      "foreground": "#526044",
+      "background": "#E7ECD9",
+      "ratio": 5.585,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "role": "Трав’яна зелена секція",
+      "foreground": "#F7F8EE",
+      "background": "#486B00",
+      "ratio": 5.806,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "role": "Лісова зелена секція",
+      "foreground": "#F7F8EE",
+      "background": "#2E4600",
+      "ratio": 9.846,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "role": "Панель виробничого етапу",
+      "foreground": "#F7F8EE",
+      "background": "#263B00",
+      "ratio": 11.485,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "role": "Земляна кнопка",
+      "foreground": "#FFFFFF",
+      "background": "#7D4427",
+      "ratio": 7.698,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "role": "Земляна кнопка при наведенні",
+      "foreground": "#FFFFFF",
+      "background": "#64351E",
+      "ratio": 10.146,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "role": "Лаймова кнопка й виділений текст",
+      "foreground": "#2E4600",
+      "background": "#A2C523",
+      "ratio": 5.294,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "role": "Вибрана вкладка процесу",
+      "foreground": "#2E4600",
+      "background": "#A2C523",
+      "ratio": 5.294,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "role": "Вибраний фільтр",
+      "foreground": "#F7F8EE",
+      "background": "#486B00",
+      "ratio": 5.806,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "role": "Буквиця",
+      "foreground": "#486B00",
+      "background": "#F7F8EE",
+      "ratio": 5.806,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "role": "Поле форми",
+      "foreground": "#2E4600",
+      "background": "#FFFFFF",
+      "ratio": 10.541,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "role": "Межа поля",
+      "foreground": "#65764F",
+      "background": "#FFFFFF",
+      "ratio": 4.932,
+      "minimum": 3,
+      "pass": true
+    },
+    {
+      "role": "Помилка форми",
+      "foreground": "#823719",
+      "background": "#FFF1E8",
+      "ratio": 7.57,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "role": "Повідомлення про помилку",
+      "foreground": "#823719",
+      "background": "#FAFBF5",
+      "ratio": 8.042,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "role": "Стан результату форми",
+      "foreground": "#2E4600",
+      "background": "#EFF2E5",
+      "ratio": 9.287,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "role": "Темний фокус на світлому",
+      "foreground": "#2E4600",
+      "background": "#F7F8EE",
+      "ratio": 9.846,
+      "minimum": 3,
+      "pass": true
+    },
+    {
+      "role": "Світле кільце фокусу на темному",
+      "foreground": "#F7F8EE",
+      "background": "#2E4600",
+      "ratio": 9.846,
+      "minimum": 3,
+      "pass": true
+    },
+    {
+      "role": "Посилання на світлому",
+      "foreground": "#2E4600",
+      "background": "#FAFBF5",
+      "ratio": 10.13,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "role": "Посилання на темному",
+      "foreground": "#F7F8EE",
+      "background": "#2E4600",
+      "ratio": 9.846,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "role": "Посилання при наведенні на темному",
+      "foreground": "#A2C523",
+      "background": "#2E4600",
+      "ratio": 5.294,
+      "minimum": 4.5,
+      "pass": true
+    },
+    {
+      "role": "Індикатор читання",
+      "foreground": "#7D4427",
+      "background": "#FAFBF5",
+      "ratio": 7.398,
+      "minimum": 3,
+      "pass": true
+    },
+    {
+      "role": "Hero: лаймовий великий заголовок",
+      "foreground": "#A2C523",
+      "background": "#2E4600",
+      "ratio": 5.294,
+      "minimum": 3,
+      "pass": true
+    },
+    {
+      "role": "Hero: світлий основний текст",
+      "foreground": "#F7F8EE",
+      "background": "#2E4600",
+      "ratio": 9.846,
+      "minimum": 4.5,
+      "pass": true
+    }
+  ],
+  "passed": true
+}

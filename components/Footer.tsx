@@ -1,5 +1,7 @@
 /* eslint-disable @next/next/no-img-element -- Original brand SVG is served directly without rasterization. */
 import Link from "next/link";
+import ForestSupport from "./ForestSupport";
+import { HomeLogo } from "./HomeNavigation";
 import { type Locale } from "@/content/repository";
 export default function Footer({ locale }: { locale: Locale }) {
   const uk = locale === "uk";
@@ -7,12 +9,14 @@ export default function Footer({ locale }: { locale: Locale }) {
     <footer>
       <div className="footer-main">
         <div>
-          <img
-            src="/logo-header.svg"
-            alt="GoldenWood"
-            width="150"
-            height="100"
-          />
+          <HomeLogo locale={locale} className="footer-brand">
+            <img
+              src="/logo-header.svg"
+              alt="GoldenWood"
+              width="150"
+              height="100"
+            />
+          </HomeLogo>
           <p>
             {uk
               ? "Природний ресурс.\nПромисловий потенціал."
@@ -39,6 +43,7 @@ export default function Footer({ locale }: { locale: Locale }) {
           {[
             ["products", uk ? "Каталог сировини" : "Materials catalog"],
             ["industries", uk ? "Галузі застосування" : "Applications"],
+            ["hemp", uk ? "Можливості конопель" : "Why hemp"],
             ["knowledge", uk ? "Центр знань" : "Knowledge center"],
             ["contacts", uk ? "Контакти" : "Contacts"],
           ].map(([s, t]) => (
@@ -51,9 +56,7 @@ export default function Footer({ locale }: { locale: Locale }) {
           <span className="eyebrow">
             {uk ? "ПОЧНІМО ДІАЛОГ" : "LET’S TALK"}
           </span>
-          <a href="mailto:sales@goldenwood.example">
-            sales@goldenwood.example ↗
-          </a>
+          <span className="contact-email">sales@goldenwood.example</span>
           <p>
             {uk
               ? "Україна, м. Зеленодільськ\nвул. Промислових культур, 18"
@@ -66,6 +69,7 @@ export default function Footer({ locale }: { locale: Locale }) {
           </small>
         </div>
       </div>
+      <ForestSupport locale={locale} compact />
       <div className="footer-bottom">
         <span>© {new Date().getFullYear()} GoldenWood Holding</span>
         <Link href={`/${locale}/privacy`}>

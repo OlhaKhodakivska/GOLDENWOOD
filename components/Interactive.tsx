@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { motion, useReducedMotion } from "motion/react";
 import { useRouter, usePathname, useSearchParams } from "next/navigation";
-import { ArrowUpRight, Plus, Minus, Search, ArrowRight } from "lucide-react";
+import { Plus, Minus, Search } from "lucide-react";
 import {
   type Locale,
   stages,
@@ -47,9 +47,7 @@ export function ProcessExplorer({ locale }: { locale: Locale }) {
             }}
             onClick={() => setActive(i)}
           >
-            <span>0{i + 1}</span>
             {s.name[locale]}
-            <ArrowUpRight size={18} />
           </button>
         ))}
       </div>
@@ -64,12 +62,11 @@ export function ProcessExplorer({ locale }: { locale: Locale }) {
         aria-labelledby={`stage-tab-${active}`}
         tabIndex={0}
       >
-        <Photo name={stages[active].image} alt={stages[active].name[locale]} />
         <div>
-          <span className="eyebrow">0{active + 1} / 06</span>
           <h3>{stages[active].name[locale]}</h3>
           <p>{stages[active].description[locale]}</p>
         </div>
+        <Photo name={stages[active].image} alt={stages[active].name[locale]} />
       </motion.div>
     </div>
   );
@@ -77,10 +74,9 @@ export function ProcessExplorer({ locale }: { locale: Locale }) {
 export function FAQAccordion({ locale }: { locale: Locale }) {
   return (
     <div className="faq-list">
-      {faq.map((f, i) => (
-        <details key={i}>
+      {faq.map((f) => (
+        <details key={f.q.en}>
           <summary>
-            <span className="faq-num">0{i + 1}</span>
             {f.q[locale]}
             <Plus size={20} className="plus" />
             <Minus size={20} className="minus" />
@@ -137,6 +133,7 @@ export function ProductFilters({ locale }: { locale: Locale }) {
             <option value="">{uk ? "Усі типи" : "All types"}</option>
             <option value="fiber">{uk ? "Волокно" : "Fiber"}</option>
             <option value="hurd">{uk ? "Костриця" : "Hurd"}</option>
+            <option value="seed">{uk ? "Насіння" : "Seeds"}</option>
             <option value="input">
               {uk ? "Вхідна сировина" : "Input material"}
             </option>
@@ -160,7 +157,7 @@ export function ProductFilters({ locale }: { locale: Locale }) {
           className="text-link"
           onClick={() => router.replace(path, { scroll: false })}
         >
-          {uk ? "Скинути" : "Reset"} <ArrowRight size={16} />
+          {uk ? "Скинути" : "Reset"}
         </button>
       </div>
       <p className="result-count" aria-live="polite">

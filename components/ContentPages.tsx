@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { ArrowUpRight, ArrowRight } from "./icons";
+import LogisticsSection from "./LogisticsSection";
+import ForestSupport from "./ForestSupport";
 import {
   type Locale,
   repository,
@@ -24,14 +25,16 @@ export function PageHeading({
   title,
   intro,
   eyebrow,
+  className = "",
 }: {
   locale: Locale;
   title: string;
   intro?: string;
   eyebrow?: string;
+  className?: string;
 }) {
   return (
-    <div className="page-heading">
+    <div className={`page-heading ${className}`}>
       <Breadcrumbs locale={locale} items={[{ label: eyebrow || title }]} />
       {eyebrow && (
         <span className="eyebrow">
@@ -58,8 +61,8 @@ export function Catalog({ locale }: { locale: Locale }) {
         }
         intro={
           uk
-            ? "Вхідна стеблова сировина, волокнисті та деревинні фракції. Знайдіть основу для вашого виробництва."
-            : "Input stalk materials, fibrous and woody fractions. Find a foundation for your manufacturing process."
+            ? "Стеблова сировина, волокнисті й деревинні фракції та насіння. Знайдіть основу для вашого виробництва."
+            : "Stalk materials, fibrous and woody fractions, and hemp seeds. Find a foundation for your manufacturing process."
         }
       />
       <section className="section catalog-section">
@@ -110,7 +113,6 @@ export function Material({ locale, slug }: { locale: Locale; slug: string }) {
               {uk
                 ? "Запитати зразки та специфікацію"
                 : "Request samples & specification"}
-              <ArrowUpRight size={18} />
             </Link>
           </div>
         </div>
@@ -129,18 +131,29 @@ export function Material({ locale, slug }: { locale: Locale; slug: string }) {
               : "Exact values are established for the specific batch and assessed using an agreed method."
           }
         />
-        <ProductSpecs locale={locale} />
+        <ProductSpecs locale={locale} product={p} />
       </section>
       <section className="section split-section">
         <div>
           <SectionIntro
             eyebrow={uk ? "ПОХОДЖЕННЯ МАТЕРІАЛУ" : "MATERIAL ORIGIN"}
-            title={stages[p.stage].name[locale]}
-            description={stages[p.stage].description[locale]}
+            title={
+              p.type === "seed"
+                ? uk
+                  ? "Збирання та підготовка насіння"
+                  : "Harvesting and seed preparation"
+                : stages[p.stage].name[locale]
+            }
+            description={
+              p.type === "seed"
+                ? uk
+                  ? "Насіння збирають окремим технологічним потоком, очищують і готують до погодженого використання. Харчову безпечність та посівні якості перевіряють за різними вимогами; призначення партії не можна підміняти."
+                  : "Seeds follow a separate harvesting, cleaning and preparation process. Food safety and sowing quality follow different requirements; batch purposes are not interchangeable."
+                : stages[p.stage].description[locale]
+            }
           />
           <Link className="text-link" href={`/${locale}/production`}>
             {uk ? "Увесь виробничий ланцюг" : "The complete production chain"}
-            <ArrowUpRight size={18} />
           </Link>
         </div>
         <Photo
@@ -207,7 +220,6 @@ export function Corporate({ locale, slug }: { locale: Locale; slug: string }) {
       <div className="section editorial-sections">
         {p.sections.map((s, i) => (
           <section key={i}>
-            <span className="eyebrow">0{i + 1}</span>
             <h2>{s.title[locale]}</h2>
             <p>{s.body[locale]}</p>
           </section>
@@ -230,6 +242,7 @@ export function Corporate({ locale, slug }: { locale: Locale; slug: string }) {
           </Button>
         </section>
       )}
+      {slug === "sustainability" && <ForestSupport locale={locale} />}
       <CTA locale={locale} />
     </>
   );
@@ -267,14 +280,14 @@ export function Production({ locale }: { locale: Locale }) {
         <div>
           {stages.map((s, i) => (
             <section className="story-step" key={i}>
-              <Photo name={s.image} alt={s.name[locale]} />
-              <span className="eyebrow">0{i + 1} / 06</span>
               <h2>{s.name[locale]}</h2>
               <p>{s.description[locale]}</p>
+              <Photo name={s.image} alt={s.name[locale]} />
             </section>
           ))}
         </div>
       </div>
+      <LogisticsSection locale={locale} />
       <section className="section sample-section">
         <h2>
           {uk
@@ -296,6 +309,7 @@ export function Industries({ locale }: { locale: Locale }) {
   return (
     <>
       <PageHeading
+        className="industries-heading"
         locale={locale}
         eyebrow={uk ? "ГАЛУЗІ ЗАСТОСУВАННЯ" : "INDUSTRIAL APPLICATIONS"}
         title={
@@ -310,9 +324,8 @@ export function Industries({ locale }: { locale: Locale }) {
         }
       />
       <section className="section industry-cards">
-        {industries.map((i, n) => (
+        {industries.map((i) => (
           <article id={i.slug} key={i.slug}>
-            <span className="eyebrow">0{n + 1}</span>
             <h2>{i.name[locale]}</h2>
             <p>{i.description[locale]}</p>
             <Link
@@ -320,7 +333,6 @@ export function Industries({ locale }: { locale: Locale }) {
               href={`/${locale}/products?application=${i.slug}`}
             >
               {uk ? "Відповідні матеріали" : "Relevant materials"}
-              <ArrowUpRight size={20} />
             </Link>
           </article>
         ))}
@@ -359,7 +371,6 @@ export function Knowledge({ locale }: { locale: Locale }) {
             <h2>{a.title[locale]}</h2>
             <span className="text-link">
               {uk ? "Читати статтю" : "Read article"}
-              <ArrowUpRight size={18} />
             </span>
           </Link>
         ))}
@@ -407,7 +418,6 @@ export function Article({ locale, slug }: { locale: Locale; slug: string }) {
           ))}
           <Link className="text-link" href={`/${locale}/request`}>
             {uk ? "Обговорити ваш процес" : "Discuss your process"}
-            <ArrowRight size={18} />
           </Link>
         </div>
         <script
@@ -462,9 +472,8 @@ export function RequestPage({ locale }: { locale: Locale }) {
                 "We discuss specifications",
                 "We agree samples and supply",
               ]
-          ).map((s, i) => (
+          ).map((s) => (
             <div className="request-step" key={s}>
-              <span>0{i + 1}</span>
               <h3>{s}</h3>
             </div>
           ))}
@@ -512,17 +521,15 @@ export function Contacts({ locale }: { locale: Locale }) {
             <div>
               <dt>{uk ? "Постачання" : "Supply"}</dt>
               <dd>
-                <a href="mailto:sales@goldenwood.example">
-                  sales@goldenwood.example
-                </a>
+                <span className="contact-email">sales@goldenwood.example</span>
               </dd>
             </div>
             <div>
               <dt>{uk ? "Агропартнерство" : "Grower partnership"}</dt>
               <dd>
-                <a href="mailto:partners@goldenwood.example">
+                <span className="contact-email">
                   partners@goldenwood.example
-                </a>
+                </span>
               </dd>
             </div>
             <div>
@@ -548,7 +555,6 @@ export function Contacts({ locale }: { locale: Locale }) {
             : ["Field", "Processing", "Warehouse", "Your production"]
           ).map((s, i) => (
             <div key={s}>
-              <span>0{i + 1}</span>
               <h3>{s}</h3>
               {i < 3 && <ArrowDownIcon />}
             </div>

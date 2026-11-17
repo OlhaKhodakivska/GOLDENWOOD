@@ -1,54 +1,69 @@
-# Фактичні перевірки GoldenWood
+# Validation report
 
-Дата: 16 листопада 2026.
+Last verified locally: **17 November 2026**.
 
-## Автоматизовано
+This report distinguishes automated HTTP checks from browser interaction checks. Passing these checks is not a claim of complete accessibility compliance, production readiness for a real supplier, or measured Core Web Vitals.
 
-- Next.js production build: успішно, strict TypeScript проходить.
-- ESLint: без помилок і попереджень. Оригінальні SVG бренду свідомо віддаються без растеризації через img; фотографії оптимізовані власним picture/srcset.
-- `npm test`: 12 перевірок схеми, серверної валідації, honeypot, body limit, content type, origin, rate limit, demo та live provider.
-- `npm run test:e2e`: 8 HTTP-інтеграційних перевірок. Це не браузерні end-to-end тести: вони перевіряють редирект, 40 локалізованих маршрутів, один H1, lang, noindex, передавання продукту, URL-фільтри, складені фільтри, порожній результат, локалізовані 404, усі 66 оптимізованих зображень, локальні навігаційні посилання, 12 шрифтів і реальний same-origin demo POST.
-- Live provider перевірений підмінним транспортом: відмова повертає 503, підтверджене прийняття 202 дає delivered=true. Реальна доставка не підключена.
-- `npm audit --omit=dev`: 0 відомих уразливостей production-залежностей на час перевірки. У допоміжному Sites-адаптері залишилися 4 moderate-попередження у ланцюгу Vinext → @vercel/og → satori → fflate; ці функції роботи із ZIP/генерацією OG у сайті не використовуються. Примусовий downgrade не застосовувався.
+## Automated checks
 
-Окремо HTTP-сценарії перевірені у Cloudflare runtime. Для local preview артефакту, зібраного з production-origin, TEST_ORIGIN має відповідати налаштованій зовнішній адресі; інший origin коректно відхиляється з 403.
+| Check                    | Result    | Scope                                                                                                      |
+| ------------------------ | --------- | ---------------------------------------------------------------------------------------------------------- |
+| `npm run build`          | Passed    | Optimized Next.js production build and TypeScript compilation                                              |
+| `npm run typecheck`      | Passed    | Strict TypeScript checking                                                                                 |
+| `npm run lint`           | Passed    | ESLint, React Hooks, Next.js, and JSX accessibility rules                                                  |
+| `npm test`               | 12 passed | Shared validation, API request limits, origin/content checks, demo mode, and mocked live-delivery outcomes |
+| `npm run test:e2e`       | 10 passed | HTTP integration scenarios against the production server                                                   |
+| `npm run check:links`    | Passed    | 44 pages, 152 distinct links, 86 internal targets, 64 fragment checks                                      |
+| `npm run check:contrast` | 30 passed | Selected semantic foreground/background pairs                                                              |
 
-## Перевірено у браузері
+HTTP integration checks cover localized routes and 404 responses, one H1 and correct document language, language-switch URLs, query-based filters, material selection passed into the inquiry form, image/font responses, and a same-origin demo POST.
 
-- Перший екран у мобільній і десктопній композиціях; підтверджене desktop CSS viewport: 960 px.
-- Перемикання виробничих етапів кліком і клавішею ArrowRight; фото й текст змінюються.
-- Фільтр костриці: два результати, type=hurd у URL.
-- Поєднання type=hurd та application=construction: два результати.
-- Пошук неіснуючого матеріалу: порожній результат і дія скидання.
-- Скидання відновлює п’ять матеріалів.
-- Перемикання UK → EN зберігає type/application і поточний каталог.
-- Перехід із Hemp hurd через Request an offer передає material=hemp-hurd; у формі вибрано Hemp hurd.
-- Порожня форма показує доступні помилки й фокусує перше поле.
-- Стан невдалої доставки показує чесне повідомлення та не оголошує успіх.
-- Під час перевірки виявлений hydration-конфлікт анімацій: виправлений усуненням ранніх змін класів серверної розмітки. Поява секцій реалізована прогресивним CSS, перемикання етапів — Motion.
-- Виявлена origin-помилка локального proxy: виправлена, підтверджена реальним HTTP demo POST.
+The latest internal-link report does **not** request external sites. ForestCom and Rainforest Trust returned HTTP 200 during an earlier optional external check; availability can change.
 
-Подальші браузерні дії були заблоковані політикою інструмента браузера. Їх не обходили іншою системою керування. Тому завершальне підтвердження 360 px, планшета, Escape/focus trap мобільного меню, reduced motion і повністю чистої консолі потребує окремого доступного браузерного прогону. Відповідна логіка й адаптивні правила реалізовані, але повну ручну перевірку не оголошено виконаною.
+Reports:
 
-## Контраст
+- [Internal links](validation/link-checks.json)
+- [Color contrast](validation/color-contrast.json)
+- [Earlier responsive geometry checks](validation/responsive-checks.json)
 
-Розрахунок WCAG для суцільних кольорів:
+## Browser checks
 
-| Пара | Контраст |
-|---|---:|
-| earth #524A3A / cream #FFFAE1 | 8.34:1 |
-| cream #FFFAE1 / grass #5A5F37 | 6.40:1 |
-| earth #524A3A / paper #F7F5E9 | 8.00:1 |
-| приглушений великий заголовок #85876E / paper | 3.37:1 |
-| іконка #30331F / pea #919636 | 4.09:1 |
-| межа поля #85896F / фон поля #FCFBF2 | 3.48:1 |
+Portfolio screenshots were captured from the actual Next.js production server:
 
-Earth на pea дає лише 2.76:1, тому це поєднання не використовується для інформативного тексту. Світлий текст на pea також не використовується. Для фокусу застосовано темний outline зі світлим зовнішнім кільцем. Контраст тексту на фотографіях потребує візуальної оцінки конкретного відображення; застосований затемнювальний overlay.
+| Page                            | Viewport    | Artifact                                                |
+| ------------------------------- | ----------- | ------------------------------------------------------- |
+| English homepage                | 1440 × 1000 | [Desktop homepage](docs/screenshots/home-desktop.png)   |
+| English industrial applications | 1440 × 1000 | [Applications](docs/screenshots/industries-desktop.png) |
+| English material catalog        | 1440 × 1000 | [Catalog](docs/screenshots/catalog-desktop.png)         |
+| English homepage                | 390 × 1000  | [Mobile homepage](docs/screenshots/home-mobile.png)     |
 
-## Межі результату
+The applications page and mobile homepage showed no horizontal document overflow in the screenshot session. These screenshots are a targeted visual check, not a full regression of every route at every viewport.
 
-- Сайт — демонстраційна концепція; контакти вигадані, поштові адреси .example не працюють, юридичні тексти є проєктами.
-- 11 фотографій створені вбудованим Imagegen. Оригінали й точні промпти збережені; це не документальні свідчення реальних активів.
-- Demo перевіряє заявку й не доставляє її. Для live потрібні фактичний HTTPS provider, розподілений Redis і перевірка одержання заявки.
-- Core Web Vitals, Lighthouse та поведінка реальних мобільних пристроїв не вимірювалися. Значення LCP/CLS/INP не оголошуються досягнутими.
-- Приватна публікація через Sites використовує сумісний Vinext-адаптер. Основний Next.js runtime також зібраний окремо. Перед реальним запуском потрібна перевірка обраного хостингу та справжніх інтеграцій.
+Earlier browser interaction checks confirmed:
+
+- Navigation from a footer link to a different page resets scroll to the top.
+- A footer link to the already-open catalog resets scroll from 2219 px to zero.
+- Header and footer logos return to the localized homepage at `#top`.
+- An application anchor opens the corresponding section below the fixed header.
+- Production tabs change content by click and ArrowRight.
+- Mobile navigation locks background scrolling, closes with Escape, and returns focus to its trigger.
+
+The earlier responsive run completed 32 of 36 planned geometry checks before a browser interruption. Completed checks reported no horizontal overflow. The four unfinished checks were not claimed as passing.
+
+## Asset checks
+
+- 14 original conceptual images; 84 AVIF/WebP variants.
+- 12 self-hosted Manrope font files.
+- Ukrainian and US flag assets return HTTP 200.
+- SVG, PNG, and ICO favicon assets return HTTP 200; the mark was visually inspected at 180 px and 32 px.
+- The original logo remains separate from derived header/favicon assets.
+
+## Limits and deployment conditions
+
+- Real webhook delivery and Redis are not connected in the default demo. Delivery success/failure paths are tested with a mocked provider.
+- Without a trusted client-IP adapter, the rate-limit key is shared. Keep `RATE_LIMIT_TRUST_CF_IP=false` on Vercel; enabling it there would trust an unverified header.
+- Demo rate limits are process-local and can reset with a server instance. Live mode requires distributed limits.
+- Reduced-motion support exists in CSS/Motion; a fresh system-level preference toggle was not tested during the screenshot session.
+- No current Lighthouse, Core Web Vitals, screen-reader certification, or production load-test results are asserted.
+- Contact and legal pages are demonstration content. A real commercial launch needs actual business details, reviewed legal content, and configured delivery.
+- Search indexing remains disabled by default for the portfolio demo.
